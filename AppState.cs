@@ -9,11 +9,10 @@ namespace AppReciclique
 
         public static int Pontos
         {
-            get => Preferences.Get("pontos", 0);
-            set => Preferences.Set("pontos", value);
-
+            get => Preferences.Get($"pontos_{IdUsuario}", 0);
+            set => Preferences.Set($"pontos_{IdUsuario}", value);
         }
-  
+
 
         public static int IdUsuario { get; set; }
         public static string NomeUsuario { get; set; } = "";
@@ -25,6 +24,8 @@ namespace AppReciclique
         public static string PlanoUsuario { get; set; } = "Plano gratuito";
         public static string NivelUsuario { get; set; } = "Bronze";
         public static string IconeNivel { get; set; } = "🟤";
+
+        public static ObservableCollection<string> Historico { get; set; } = new();
 
         public static ObservableCollection<string> Notificacoes { get; set; } = new();
 
@@ -45,7 +46,7 @@ namespace AppReciclique
 
             string nivel;
             string icone;
-          
+
 
             if (pontos <= 100)
             {
@@ -73,6 +74,7 @@ namespace AppReciclique
                 icone = "💎";
             }
 
+
             NivelUsuario = nivel;
             IconeNivel = icone;
 
@@ -82,5 +84,7 @@ namespace AppReciclique
             }
 
         }
+
+     
     }
 }

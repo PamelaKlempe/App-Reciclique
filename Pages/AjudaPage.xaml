@@ -5,10 +5,13 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <VerticalStackLayout>
+    <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10">
+        <!-- TOPO -->
+        <VerticalStackLayout BackgroundColor="#2E7D32"
+                             Padding="10"
+                             Spacing="5"
+                             Grid.Row="0">
 
             <Label Text="←"
                    TextColor="White"
@@ -20,29 +23,87 @@
 
             <Label Text="Ajuda e Suporte"
                    TextColor="White"
-                   FontSize="20"
+                   FontSize="16"
                    FontAttributes="Bold"/>
-
         </VerticalStackLayout>
 
-        <!-- CONTEÚDO (ROW 1) -->
-        <VerticalStackLayout Padding="20" Spacing="15">
+        <!-- CONTEÚDO -->
+        <ScrollView Grid.Row="1">
 
-            <Entry Placeholder="Seu nome" x:Name="txtNome"/>
+            <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Entry Placeholder="Telefone" x:Name="txtTelefone"/>
+                <!-- TEXTO -->
+                <Label Text="Precisa de ajuda? Preencha o formulário ou entre em contato:"
+                       FontSize="14"
+                       TextColor="Gray"/>
 
-            <Editor Placeholder="Digite sua dúvida ou sugestão..."
-                    HeightRequest="120"
-                    x:Name="txtMensagem"/>
+                <!-- CONTATO -->
+                <Frame BackgroundColor="White"
+                       CornerRadius="12"
+                       Padding="10">
 
-            <Button Text="Enviar"
-                    BackgroundColor="#2E7D32"
-                    TextColor="White"
-                    Clicked="OnEnviarClicked"/>
+                    <VerticalStackLayout Spacing="5">
 
-        </VerticalStackLayout>
+                        <Label Text="📞 (14) 99999-0000"
+                               FontSize="14"
+                               TextColor="#2E7D32"/>
 
-    </VerticalStackLayout>
+                        <Label Text="📧 suporte@reciclique.com"
+                               FontSize="14"
+                               TextColor="#2E7D32"/>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+                <!-- FORMULÁRIO -->
+                <Entry Placeholder="Seu nome"
+                       x:Name="txtNome"/>
+
+                <Entry Placeholder="Seu e-mail"
+                       Keyboard="Email"
+                       x:Name="txtEmail"/>
+
+                <Entry Placeholder="Telefone"
+                       Keyboard="Telephone"
+                       x:Name="txtTelefone"/>
+
+                <Editor Placeholder="Digite sua dúvida ou sugestão..."
+                        HeightRequest="120"
+                        x:Name="txtMensagem"/>
+
+                <!-- BOTÃO -->
+                <Button Text="Enviar"
+                        BackgroundColor="#2E7D32"
+                        TextColor="White"
+                        CornerRadius="8"
+                        Clicked="OnEnviarClicked"/>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <!-- MENU -->
+        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+
+            <BoxView HeightRequest="2"
+                     BackgroundColor="#2E7D32"
+                     VerticalOptions="Start"/>
+
+            <VerticalStackLayout HorizontalOptions="Start"
+                                 Margin="10,10,0,0">
+
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                </VerticalStackLayout.GestureRecognizers>
+
+                <Label Text="🏠" FontSize="24"/>
+                <Label Text="Home" FontSize="10"/>
+
+            </VerticalStackLayout>
+
+        </Grid>
+
+    </Grid>
 
 </ContentPage>

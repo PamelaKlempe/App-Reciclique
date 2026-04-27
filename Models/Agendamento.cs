@@ -7,6 +7,8 @@ namespace AppReciclique.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
+        public int IdUsuario { get; set; }
+
         public string Tipo { get; set; }
         public string Endereco { get; set; }
         public DateTime Data { get; set; }

@@ -29,9 +29,9 @@
               ColumnDefinitions="*,*,*,*">
 
                 <!-- LOGO -->
-                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50">
-                    <Image Source="logo.png" HeightRequest="60" />
-                    
+                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="50" Margin="0,-6,0,0">
+                    <Image Source="logosemletra.png" HeightRequest="70" />
+
                 </VerticalStackLayout>
                 <!-- PONTOS -->
                 <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50">
@@ -44,7 +44,9 @@
                 <!-- NÍVEL -->
                 <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50">
                     <Label Text="⚪" x:Name="lblIconeNivel" FontSize="16" HorizontalOptions="Center"/>
-                    <Label Text="Iniciante" x:Name="lblNivel" FontSize="14" FontAttributes="Bold" TextColor="#1B5E20" HorizontalOptions="Center"/>
+                    <Label x:Name="lblNivel" FontSize="14" FontAttributes="Bold" TextColor="#1B5E20" HorizontalOptions="Center"/>
+
+       
 
                 </VerticalStackLayout>
 
@@ -55,7 +57,7 @@
 
                 </VerticalStackLayout>
 
-                <!-- LINHA VERDE -->    
+                <!-- LINHA VERDE -->
                 <BoxView Grid.Row="1"
                    Grid.ColumnSpan="4"
                    HeightRequest="2"
@@ -134,7 +136,9 @@
                 </Frame>
 
                 <!-- CARROSSEL -->
-                <CollectionView x:Name="carouselParceiros" ItemsSource="{Binding parceiros}" ItemsLayout="HorizontalList" HeightRequest="120">
+                <CollectionView x:Name="carouselParceiros"
+                ItemsLayout="HorizontalList"
+                HeightRequest="120">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame WidthRequest="80" HeightRequest="80" Margin="3" CornerRadius="3" Padding="5" BackgroundColor="#F9F9F9" HasShadow="False">

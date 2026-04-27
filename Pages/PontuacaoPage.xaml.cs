@@ -21,9 +21,10 @@ public partial class PontuacaoPage : ContentPage
     {
         base.OnAppearing();
 
+        AppState.VerificarNivel();
+
         int pontos = AppState.Pontos;
 
-        AppState.VerificarNivel(); // 👈 CENTRALIZA
 
         lblPontos.Text = pontos.ToString();
         lblNivel.Text = AppState.NivelUsuario;

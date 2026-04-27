@@ -12,18 +12,18 @@ public partial class ContaUsuarioPage : ContentPage
     {
         base.OnAppearing();
 
-        lblBoasVindas.Text = $"Olá, {AppState.NomeUsuario}!";
 
-        lblId.Text = $"ID do usuário: {AppState.IdUsuario}";
-        lblNome.Text = $"Nome: {AppState.NomeUsuario}";
-        lblEmail.Text = $"Email: {AppState.EmailUsuario}";
-        lblNascimento.Text = $"Data de nascimento: {AppState.DataNascimentoUsuario}";
-        lblTelefone.Text = $"Telefone: {AppState.TelefoneUsuario}";
-        lblEndereco.Text = $"Endereço: {AppState.EnderecoUsuario}";
-        lblCep.Text = $"CEP: {AppState.CepUsuario}";
+        lblId.Text = AppState.IdUsuario.ToString();
+        lblNome.Text = AppState.NomeUsuario;
+        lblEmail.Text = AppState.EmailUsuario;
+        lblNascimento.Text = AppState.DataNascimentoUsuario;
+        lblTelefone.Text = AppState.TelefoneUsuario;
+        lblEndereco.Text = AppState.EnderecoUsuario;
+        lblCep.Text = AppState.CepUsuario;
+
         lblPlano.Text = AppState.PlanoUsuario;
 
-  
+
     }
 
     private async void OnVoltarClicked(object sender, EventArgs e)
@@ -42,7 +42,15 @@ public partial class ContaUsuarioPage : ContentPage
 
         if (confirmar)
         {
+            //LIMPA OS DADOS DO USUÁRIO NA MEMÓRIA
+            AppState.IdUsuario = 0;
             AppState.NomeUsuario = "";
+            AppState.EmailUsuario = "";
+            AppState.TelefoneUsuario = "";
+            AppState.DataNascimentoUsuario = "";
+            AppState.EnderecoUsuario = "";
+            AppState.CepUsuario = "";
+
             Application.Current.MainPage = new NavigationPage(new LoginPage());
         }
 

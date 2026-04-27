@@ -7,7 +7,8 @@ public partial class LoginPage : ContentPage
      { "pamela@etec.com", "123" },
      { "marcos@etec.com", "123" },
      { "maeli@etec.com", "123" },
-     { "gabriel@etec.com", "123" }
+     { "gabriel@etec.com", "123" },
+     { "tatiana@etec.com", "123" }
     };
 
 
@@ -27,7 +28,7 @@ public partial class LoginPage : ContentPage
             return;
         }
 
-        // 👇 define dados por usuário
+        //  define dados por usuário
         switch (email)
         {
             case "pamela@etec.com":
@@ -69,13 +70,32 @@ public partial class LoginPage : ContentPage
                 AppState.EnderecoUsuario = "Rua Verde, 400 - Osasco/SP";
                 AppState.CepUsuario = "06000-000";
                 break;
+
+            case "tatiana@etec.com":
+                AppState.IdUsuario = 5;
+                AppState.NomeUsuario = "Profª Tatiana";
+                AppState.EmailUsuario = email;
+                AppState.TelefoneUsuario = "(14) 99999-5555";
+                AppState.DataNascimentoUsuario = "01/01/1980";
+                AppState.EnderecoUsuario = "Marília/SP";
+                AppState.CepUsuario = "17500-000";
+                break;
         }
 
-        // 👇 padrão do sistema
+        //  padrão do sistema
         AppState.PlanoUsuario = "Plano gratuito";
 
-        // 👇 NÃO mexe em pontos aqui
+        // NÃO mexe em pontos aqui
         AppState.VerificarNivel();
+
+        // Notificações simuladas para demonstração do aplicativo
+        AppState.Notificacoes.Clear();
+
+        AppState.AdicionarNotificacao("Você tem uma coleta agendada amanhã");
+        AppState.AdicionarNotificacao("Você ganhou 30 pontos");
+        AppState.AdicionarNotificacao("Parabéns! Você subiu de nível");
+
+        await DisplayAlert("Sucesso", "Login realizado!", "OK");
 
         await DisplayAlert("Sucesso", "Login realizado!", "OK");
 

@@ -8,8 +8,11 @@
 
     <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
+        <!-- TOPO -->
+        <VerticalStackLayout BackgroundColor="#2E7D32"
+                             Padding="10"
+                             Spacing="5"
+                             Grid.Row="0">
 
             <Label Text="←"
                    TextColor="White"
@@ -21,48 +24,57 @@
 
             <Label Text="Histórico de Atividades"
                    TextColor="White"
-                   FontSize="20"
+                   FontSize="16"
                    FontAttributes="Bold"/>
-           
-
         </VerticalStackLayout>
 
-        <!-- CONTEÚDO (ROW 1) -->
+        <!-- LISTA -->
         <CollectionView Grid.Row="1"
                         x:Name="listaHistorico"
-                        Margin="10">
+                        Margin="15">
 
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Agendamento">
+
                     <Frame Margin="5"
-                           Padding="10"
-                           BorderColor="#2E7D32"
-                           CornerRadius="10">
+                           Padding="12"
+                           BackgroundColor="White"
+                           CornerRadius="12"
+                           HasShadow="True">
 
-                        <VerticalStackLayout Spacing="5">
+                        <VerticalStackLayout Spacing="6">
 
+                            <!-- TIPO -->
                             <Label Text="{Binding Tipo}"
                                    FontAttributes="Bold"
+                                   FontSize="16"
                                    TextColor="#2E7D32"/>
 
+                            <!-- ENDEREÇO -->
                             <Label Text="{Binding Endereco}"
-                                   FontSize="13"/>
+                                   FontSize="14"
+                                   LineBreakMode="WordWrap"/>
 
-                            <Label Text="{Binding Data, StringFormat='Data: {0:dd/MM/yyyy}'}"
-                                   FontSize="12"/>
+                            <!-- DATA -->
+                            <Label Text="{Binding Data, StringFormat='📅 Data: {0:dd/MM/yyyy}'}"
+                                   FontSize="12"
+                                   TextColor="Gray"/>
 
-                            <Label Text="{Binding Hora}"
-                                   FontSize="12"/>
+                            <!-- HORA -->
+                            <Label Text="{Binding Hora, StringFormat='⏰ Hora: {0}'}"
+                                   FontSize="12"
+                                   TextColor="Gray"/>
 
                         </VerticalStackLayout>
 
                     </Frame>
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
         </CollectionView>
 
-        <!-- MENU INFERIOR (ROW 2) -->
+        <!-- MENU -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
             <BoxView HeightRequest="2"
@@ -76,13 +88,8 @@
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠"
-                       FontSize="24"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="Home"
-                       FontSize="10"
-                       HorizontalOptions="Center"/>
+                <Label Text="🏠" FontSize="24"/>
+                <Label Text="Home" FontSize="10"/>
 
             </VerticalStackLayout>
 

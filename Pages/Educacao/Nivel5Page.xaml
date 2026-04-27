@@ -20,7 +20,8 @@
 
             <Label Text="NÍVEL 5 — AÇÃO NA PRÁTICA (MUTIRÃO)"
            TextColor="white"
-           FontSize="20"/>
+           FontSize="12"
+FontAttributes="Bold"/>
         </VerticalStackLayout>
 
 

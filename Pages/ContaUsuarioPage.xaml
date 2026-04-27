@@ -7,7 +7,7 @@
 
     <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO (ROW 0) -->
+        <!-- TOPO -->
         <VerticalStackLayout 
             BackgroundColor="#2E7D32" 
             Padding="15"
@@ -24,125 +24,146 @@
 
             <Label Text="MINHA CONTA"
                    TextColor="White"
-                   FontSize="15"
-                   FontAttributes="Bold"
-                   HorizontalOptions="StartAndExpand"/>
+                   FontSize="16"
+                   FontAttributes="Bold"/>
 
-            <Label x:Name="lblBoasVindas"
-                   TextColor="White"
-                   FontSize="14"/>
 
         </VerticalStackLayout>
 
-
-        <!-- CONTEÚDO (ROW 1) -->
+        <!-- CONTEÚDO -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="30" Spacing="15">
+            <VerticalStackLayout Padding="25" Spacing="20">
 
                 <Frame BackgroundColor="White"
-                       CornerRadius="12"
-                       Padding="15">
+                       CornerRadius="15"
+                       Padding="20">
 
-                    <VerticalStackLayout Spacing="10">
+                    <VerticalStackLayout Spacing="12">
 
-                        <!-- ALTERADO: agora mostra o ID do usuário -->
-                        <Label x:Name="lblId"
-                               FontSize="16"
-                               TextColor="#1B5E20"/>
-
-                        <!-- ALTERADO: agora mostra o nome do usuário logado -->
-                        <Label x:Name="lblNome"
-                               FontSize="16"
-                               FontAttributes="Bold"
-                               TextColor="#1B5E20"/>
-
-                        <!-- ALTERADO: agora mostra o e-mail do usuário logado -->
-                        <Label x:Name="lblEmail"
-                               FontSize="16"
-                               TextColor="#1B5E20"/>
-
-                        <!-- ALTERADO: agora mostra a data de nascimento do usuário logado -->
-                        <Label x:Name="lblNascimento"
-                               FontSize="16"
-                               TextColor="#1B5E20"/>
-
-                        <!-- ALTERADO: agora mostra o telefone do usuário logado -->
-                        <Label x:Name="lblTelefone"
-                               FontSize="16"
-                               TextColor="#1B5E20"/>
-
-                        <!-- ALTERADO PARA O PEDIDO: endereço completo -->
-                        <Label x:Name="lblEndereco"
-                               FontSize="16"
-                               TextColor="#1B5E20"/>
-
-                        <!-- ALTERADO PARA O PEDIDO: CEP -->
-                        <Label x:Name="lblCep"
-                               FontSize="16"
-                               TextColor="#1B5E20"/>
-
-                        <!-- ALTERADO PARA O PEDIDO: plano gratuito -->
-                        <Label x:Name="lblPlano"
-                               FontSize="16"
+                        <!-- TÍTULO -->
+                        <Label Text="Dados do Usuário"
+                               FontSize="18"
                                FontAttributes="Bold"
                                TextColor="#2E7D32"/>
 
+                        <!-- ID -->
+                        <HorizontalStackLayout>
+                            <Label Text="ID:"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+                            <Label x:Name="lblId"/>
+                        </HorizontalStackLayout>
+
+                        <!-- NOME -->
+                        <HorizontalStackLayout>
+                            <Label Text="Nome:"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+                            <Label x:Name="lblNome"/>
+                        </HorizontalStackLayout>
+
+                        <!-- EMAIL -->
+                        <HorizontalStackLayout>
+                            <Label Text="Email:"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+                            <Label x:Name="lblEmail"/>
+                        </HorizontalStackLayout>
+
+                        <!-- NASCIMENTO -->
+                        <HorizontalStackLayout>
+                            <Label Text="Nascimento:"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+                            <Label x:Name="lblNascimento"/>
+                        </HorizontalStackLayout>
+
+                        <!-- TELEFONE -->
+                        <HorizontalStackLayout>
+                            <Label Text="Telefone:"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+                            <Label x:Name="lblTelefone"/>
+                        </HorizontalStackLayout>
+
+                        <!-- ENDEREÇO -->
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="5">
+
+                            <Label Text="Endereço:"
+           FontAttributes="Bold"
+           TextColor="#2E7D32"
+           Grid.Column="0"/>
+
+                            <Label x:Name="lblEndereco"
+           Grid.Column="1"
+           LineBreakMode="WordWrap"/>
+
+                        </Grid>
+
+                        <!-- CEP -->
+                        <HorizontalStackLayout>
+                            <Label Text="CEP:"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+                            <Label x:Name="lblCep"/>
+                        </HorizontalStackLayout>
+
+                        <!-- PLANO -->
+                        <HorizontalStackLayout>
+                            <Label Text="Plano:"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+                            <Label x:Name="lblPlano"
+                                   FontAttributes="Bold"/>
+                        </HorizontalStackLayout>
 
                     </VerticalStackLayout>
 
                 </Frame>
 
-                <!-- ALTERADO PARA O PEDIDO: texto institucional -->
-                <Label x:Name="lblApoio"
-                       Text="Aplicativo apoiado pela Prefeitura de Marília - SP"
+                <!-- TEXTO INSTITUCIONAL -->
+                <Label Text="Aplicativo apoiado pela Prefeitura de Marília - SP"
                        FontSize="12"
                        HorizontalTextAlignment="Center"
                        TextColor="Gray"/>
 
-
             </VerticalStackLayout>
         </ScrollView>
 
-
+        <!-- RODAPÉ -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10"
-      ColumnDefinitions="*,Auto">
+              ColumnDefinitions="*,Auto">
 
-            <!-- LINHA VERDE -->
             <BoxView Grid.ColumnSpan="2"
-             HeightRequest="2"
-             BackgroundColor="#2E7D32"
-             VerticalOptions="Start"/>
+                     HeightRequest="2"
+                     BackgroundColor="#2E7D32"
+                     VerticalOptions="Start"/>
 
             <!-- HOME -->
             <VerticalStackLayout Grid.Column="0"
-                         HorizontalOptions="Start"
-                         Margin="10,10,0,0">
+                                 HorizontalOptions="Start"
+                                 Margin="10,10,0,0">
 
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠"
-               FontSize="24"
-               HorizontalOptions="Center"/>
-
-                <Label Text="Home"
-               FontSize="10"
-               HorizontalOptions="Center"/>
+                <Label Text="🏠" FontSize="24"/>
+                <Label Text="Home" FontSize="10"/>
 
             </VerticalStackLayout>
 
             <!-- BOTÃO SAIR -->
             <Button Grid.Column="1"
-            Text="Sair"
-            Clicked="OnLogoutClicked"
-            BackgroundColor="#D32F2F"
-            TextColor="White"
-            HeightRequest="40"
-            WidthRequest="60"
-            CornerRadius="6"
-            VerticalOptions="Center"
-            Margin="0,10,10,0"/>
+                    Text="Sair"
+                    Clicked="OnLogoutClicked"
+                    BackgroundColor="#D32F2F"
+                    TextColor="White"
+                    HeightRequest="40"
+                    WidthRequest="80"
+                    CornerRadius="8"
+                    VerticalOptions="Center"
+                    Margin="0,10,10,0"/>
 
         </Grid>
 

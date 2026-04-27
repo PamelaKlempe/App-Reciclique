@@ -1,49 +1,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppReciclique.LoginPage"
-             Title="Login">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F5F5">
 
-    <VerticalStackLayout Padding="28" Spacing="15">
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
 
-        <Image
-            Source="logo.png"
-            HorizontalOptions="Center"
-            HeightRequest="120"
-            Aspect="AspectFit" />
+        <!-- LOGO -->
+        <Image Source="logo.png"
+               HorizontalOptions="Center"
+               HeightRequest="120"
+               Aspect="AspectFit"/>
 
-       <Frame CornerRadius="10"
+        <!-- TÍTULO -->
+        <Label Text="Bem-vindo"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#2E7D32"/>
+
+        <!-- EMAIL -->
+        <Frame CornerRadius="12"
                BackgroundColor="White"
-               Padding="5"
-              Margin="5">
+               Padding="10">
 
-         <Entry
-            x:Name="txtEmail"
-            Placeholder="Digite seu e-mail"
-            Keyboard="Email"
-            Margin="5"
-            TextColor="Black"
-            PlaceholderColor="Gray"/>
-           
-      </Frame>
+            <Entry x:Name="txtEmail"
+                   Placeholder="E-mail"
+                   Keyboard="Email"
+                   TextColor="Black"/>
+        </Frame>
 
-      <Frame CornerRadius="5"
-              BackgroundColor="White"
-              Padding="5"
-              Margin="5">
+        <!-- SENHA -->
+        <Frame CornerRadius="12"
+               BackgroundColor="White"
+               Padding="10">
 
-            <Entry
-            x:Name="txtSenha"
-            Placeholder="Digite sua senha"
-            IsPassword="True"
-            Margin="5"
-            TextColor="Black"
-            PlaceholderColor="Gray"/>
+            <Entry x:Name="txtSenha"
+                   Placeholder="Senha"
+                   IsPassword="True"
+                   TextColor="Black"/>
+        </Frame>
 
-       </Frame>
-
-        <Button
-            Text="Entrar"
-            Clicked="OnLoginClicked"/>
+        <!-- BOTÃO -->
+        <Button Text="Entrar"
+                BackgroundColor="#2E7D32"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnLoginClicked"/>
 
     </VerticalStackLayout>
 

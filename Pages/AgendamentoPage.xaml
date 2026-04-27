@@ -18,9 +18,9 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="AGENDAMENTO COLETA"
+            <Label Text="Agendamento de Coleta"
                    TextColor="White"
-                   FontSize="15"
+                   FontSize="16"
                    FontAttributes="Bold"/>
         </VerticalStackLayout>
 
@@ -39,7 +39,11 @@
 
                 <!-- ENDEREÇO -->
                 <Label Text="CEP"/>
-                <Entry x:Name="txtCep" Placeholder="Digite o CEP" Completed="OnBuscarCep"/>
+                <Entry x:Name="txtCep"
+                       Placeholder="Digite o CEP"
+                       Keyboard="Numeric"
+                       Completed="OnBuscarCep"/>
+
                 <Label Text="Endereço"/>
                 <Entry x:Name="txtEndereco" Placeholder="Digite seu endereço"/>
 
@@ -67,62 +71,57 @@
                 <Label Text="Observações"/>
                 <Editor x:Name="txtObs" HeightRequest="80"/>
 
-                <!-- BOTÃO -->
+                <!-- BOTÕES -->
                 <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10" Margin="0,20,0,0">
 
-                    <!-- AGENDAR -->
                     <Button Text="Agendar"
-                    BackgroundColor="#2E7D32" 
-                    TextColor="White"
-                    CornerRadius="10"
-                    HeightRequest="45"
-                    Shadow="Small"
-                    Grid.Column="0"
-                    Clicked="OnAgendarClicked"/>
+                            BackgroundColor="#2E7D32" 
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="45"
+                            Grid.Column="0"
+                            Clicked="OnAgendarClicked"/>
 
-                    <!-- EDITAR -->
                     <Button Text="Editar"
-                    BackgroundColor="#FFC107"
-                    TextColor="Black"
-                    CornerRadius="10"
-                    HeightRequest="45"
-                    Shadow="Small"
-                    Grid.Column="1"
-                    Clicked="OnEditarClicked"/>
+                            BackgroundColor="#FFC107"
+                            TextColor="Black"
+                            CornerRadius="10"
+                            HeightRequest="45"
+                            Grid.Column="1"
+                            Clicked="OnEditarClicked"/>
 
-                    <!-- NOVO -->
                     <Button Text="Novo"
-                    BackgroundColor="#2196F3"
-                    TextColor="White"
-                    CornerRadius="10"
-                    HeightRequest="45"
-                    Shadow="Small"
-                    Grid.Column="2"
-                    Clicked="OnNovoClicked"/>
+                            BackgroundColor="#2196F3"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="45"
+                            Grid.Column="2"
+                            Clicked="OnNovoClicked"/>
 
                 </Grid>
 
             </VerticalStackLayout>
         </ScrollView>
 
+        <!-- MENSAGEM DE SUCESSO (CORRIGIDO) -->
         <Label x:Name="lblSucesso"
-          Text="Agendamento salvo com sucesso! ✅"
-          BackgroundColor="#2E7D32"
-          TextColor="White"
-          HorizontalOptions="Fill"
-          Padding="10"
-          IsVisible="False"
-          Opacity="0"/>
+               Text="Agendamento salvo com sucesso! ✅"
+               BackgroundColor="#2E7D32"
+               TextColor="White"
+               HorizontalOptions="Fill"
+               VerticalOptions="End"
+               Grid.RowSpan="3"
+               Padding="10"
+               IsVisible="False"
+               Opacity="0"/>
 
         <!-- MENU INFERIOR -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
-            <!-- LINHA VERDE -->
             <BoxView HeightRequest="2"
                      BackgroundColor="#2E7D32"
                      VerticalOptions="Start"/>
 
-            <!-- HOME -->
             <VerticalStackLayout HorizontalOptions="Start"
                                  Margin="10,10,0,0">
 

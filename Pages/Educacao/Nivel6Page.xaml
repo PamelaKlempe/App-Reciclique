@@ -20,7 +20,8 @@
 
             <Label Text="NÍVEL 6 — REUTILIZAÇÃO CRIATIVA"
            TextColor="white"
-           FontSize="20"/>
+           FontSize="12"
+FontAttributes="Bold"/>
         </VerticalStackLayout>
 
 

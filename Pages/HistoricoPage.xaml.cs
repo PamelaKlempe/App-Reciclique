@@ -18,8 +18,21 @@ public partial class HistoricoPage : ContentPage
     {
         base.OnAppearing();
 
-        var lista = await db.ListarAgendamentos();
-        listaHistorico.ItemsSource = lista;
+        try
+        {
+            var lista = await db.ListarAgendamentos();
+            listaHistorico.ItemsSource = lista;
+
+            // Se não tiver nada salvo
+            if (lista.Count == 0)
+            {
+                await DisplayAlert("Aviso", "Nenhum agendamento encontrado", "OK");
+            }
+        }
+        catch (Exception)
+        {
+            await DisplayAlert("Erro", "Erro ao carregar histórico", "OK");
+        }
     }
 
     private async void OnVoltarClicked(object sender, EventArgs e)

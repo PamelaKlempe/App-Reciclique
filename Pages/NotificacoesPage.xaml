@@ -7,58 +7,56 @@
 
     <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO (ROW 0) -->
+        <!-- TOPO -->
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
 
             <Label Text="←"
-               TextColor="White"
-               FontSize="20">
+                   TextColor="White"
+                   FontSize="20">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnVoltarClicked"/>
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="Ultimos Avisos"
-               TextColor="White"
-               FontSize="20"
-               HorizontalOptions="StartAndExpand"/>
-
-            
+            <Label Text="Últimos avisos"
+                   TextColor="White"
+                   FontSize="16"
+                   FontAttributes="Bold"/>
 
         </VerticalStackLayout>
 
-        <!-- CONTEÚDO (ROW 1) -->
-        <VerticalStackLayout Grid.Row="1" Padding="20" Spacing="15">
+        <!-- LISTA DE NOTIFICAÇÕES -->
+        <CollectionView Grid.Row="1"
+                        x:Name="cvNotificacoes"
+                        Margin="20">
 
-            <!-- ALTERADO PARA O PEDIDO:
-                 aqui aparecem as notificações do sistema -->
-            <CollectionView x:Name="cvNotificacoes">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BackgroundColor="White"
-                               CornerRadius="12"
-                               Padding="12"
-                               Margin="0,5">
-                            <Label Text="{Binding .}"
-                                   TextColor="#1B5E20"
-                                   FontSize="16" />
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
 
-        </VerticalStackLayout>
+                    <Frame BackgroundColor="White"
+                           CornerRadius="12"
+                           Padding="12"
+                           Margin="0,5">
 
+                        <Label Text="{Binding .}"
+                               TextColor="#1B5E20"
+                               FontSize="16"
+                               LineBreakMode="WordWrap"/>
 
-        <!-- MENU INFERIOR (ROW 2) -->
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <!-- MENU -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
-            <!-- LINHA VERDE -->
             <BoxView HeightRequest="2"
                      BackgroundColor="#2E7D32"
                      VerticalOptions="Start"/>
 
-            <!-- HOME -->
             <VerticalStackLayout HorizontalOptions="Start"
                                  Margin="10,10,0,0">
 
@@ -66,13 +64,8 @@
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠"
-                       FontSize="24"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="Home"
-                       FontSize="10"
-                       HorizontalOptions="Center"/>
+                <Label Text="🏠" FontSize="24"/>
+                <Label Text="Home" FontSize="10"/>
 
             </VerticalStackLayout>
 

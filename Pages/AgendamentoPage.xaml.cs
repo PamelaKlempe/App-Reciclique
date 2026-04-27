@@ -39,7 +39,7 @@ public partial class AgendamentoPage : ContentPage
         string obs = txtObs.Text;
 
         // VALIDAÇÃO PRIMEIRO (CORRETO)
-        if (string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(endereco))
+        if (string.IsNullOrWhiteSpace(tipo) || string.IsNullOrWhiteSpace(endereco))
         {
             await DisplayAlert("Erro", "Preencha os campos obrigatórios", "OK");
             return;
@@ -69,7 +69,7 @@ public partial class AgendamentoPage : ContentPage
         AppState.UltimoAgendamento = resumo;
 
         //  SOMA PONTOS
-      
+
         if (tipo?.Contains("Super") == true)
         {
             AppState.Pontos += 50;
@@ -79,6 +79,10 @@ public partial class AgendamentoPage : ContentPage
             AppState.Pontos += 30;
         }
 
+        AppState.VerificarNivel();
+
+        AppState.AdicionarNotificacao($"Você ganhou pontos por uma coleta ({tipo})!");
+
         //  MOSTRA SUA NOTIFICAÇÃO BONITA
         lblSucesso.IsVisible = true;
 
@@ -87,6 +91,14 @@ public partial class AgendamentoPage : ContentPage
         await lblSucesso.FadeTo(0, 300);
 
         lblSucesso.IsVisible = false;
+
+        pickerTipo.SelectedItem = null;
+        txtCep.Text = "";
+        txtEndereco.Text = "";
+        txtNumero.Text = "";
+        txtComplemento.Text = "";
+        txtTelefone.Text = "";
+        txtObs.Text = "";
 
     }
 

@@ -20,7 +20,7 @@
 
             <Label Text="BONUS — CASA SUSTENTÁVEL"
                 TextColor="white"
-                FontSize="20"
+                FontSize="12"
                 FontAttributes="Bold"/>
             
         </VerticalStackLayout>

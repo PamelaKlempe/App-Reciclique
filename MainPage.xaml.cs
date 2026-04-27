@@ -24,40 +24,7 @@ public partial class MainPage : ContentPage
         carouselParceiros.ItemsSource = parceiros;
     }
 
-    void AtualizarNivel(int pontos)
-    {
-        string nivel;
-        string icone;
-
-        if (pontos <= 100)
-        {
-            nivel = "Bronze";
-            icone = "🟤";
-        }
-        else if (pontos <= 250)
-        {
-            nivel = "Prata";
-            icone = "⚪";
-        }
-        else if (pontos <= 400)
-        {
-            nivel = "Ouro";
-            icone = "🟡";
-        }
-        else if (pontos <= 1500)
-        {
-            nivel = "Platina";
-            icone = "🔷";
-        }
-        else
-        {
-            nivel = "Diamante";
-            icone = "💎";
-        }
-
-        lblNivel.Text = nivel;
-        lblIconeNivel.Text = icone;
-    }
+    
 
     private async void OnAgendarClicked(object sender, EventArgs e)
     {
@@ -121,9 +88,10 @@ public partial class MainPage : ContentPage
 
         int pontos = AppState.Pontos;
 
-        lblPontos.Text = pontos.ToString(); // 👈 mantém
+        lblPontos.Text = pontos.ToString();
 
-        AtualizarNivel(pontos); // 👈 chama o método
+        lblNivel.Text = AppState.NivelUsuario;
+        lblIconeNivel.Text = AppState.IconeNivel;
 
         lblSaudacao.Text = $"Olá, {AppState.NomeUsuario}";
     }
