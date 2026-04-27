@@ -50,7 +50,7 @@
 
                 <!-- COLETAS -->
                 <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50">
-                    <Label Text="🗑️" FontSize="16"/>
+                    <Label Text="🚮" FontSize="17"/>
                     <Label Text="3" FontSize="14"  FontAttributes="Bold" TextColor="#1B5E20" HorizontalOptions="Center"/>
 
                 </VerticalStackLayout>

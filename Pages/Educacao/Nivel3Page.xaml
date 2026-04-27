@@ -20,13 +20,95 @@
 
             <Label Text="NÍVEL 3 — RESÍDUOS PERIGOSOS"
            TextColor="white"
-           FontSize="20"/>
+           FontSize="12"
+             FontAttributes="Bold"/>
         </VerticalStackLayout>
 
 
 
         <!-- CONTEÚDO (ROW 1) -->
 
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="18">
+
+                <!-- BOTÃO 1 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/2768961/pexels-photo-2768961.jpeg?_gl=1*1k8cjui*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTk5MzIkajQ5JGwwJGgw"
+                Aspect="AspectFill"
+                Opacity="0.45"/>
+
+                        <Button Text="1- O Que é Resíduo?"
+                 BackgroundColor="Transparent"
+                 TextColor="#1B5E20"
+                 FontAttributes="Bold"
+                 FontSize="20"
+                 Clicked="OnOqueClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 2 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/3806781/pexels-photo-3806781.jpeg?_gl=1*18w7yby*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTk5OTMkajUxJGwwJGgw"
+                Aspect="AspectFill"
+                Opacity="0.45"/>
+                        <Button Text="2- O Que é Resíduos Tóxicos?"
+                 BackgroundColor="Transparent"
+                 TextColor="#1B5E20"
+                 FontAttributes="Bold"
+                 FontSize="20"
+                 Clicked="OnToxicoClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 3 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/15369763/pexels-photo-15369763.jpeg?_gl=1*2bq8ac*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNjAyMTUkajUkbDAkaDA."
+                Aspect="AspectFill"
+                Opacity="0.45"/>
+                        <Button Text="3- Quais são e Como tratar?"
+                 BackgroundColor="Transparent"
+                 TextColor="#1B5E20"
+                 FontAttributes="Bold"
+                 FontSize="20"
+                 Clicked="OnTratarClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 4 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/8770242/pexels-photo-8770242.jpeg?_gl=1*y649fj*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTk1MDEkajM0JGwwJGgw"
+                Aspect="AspectFill"
+                Opacity="0.45"/>
+                        <Button Text="4- Como identificar?"
+                 BackgroundColor="Transparent"
+                 TextColor="#1B5E20"
+                 FontAttributes="Bold"
+                 FontSize="20"
+                 Clicked="OnIdentifcarClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 5 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/34054388/pexels-photo-34054388.jpeg?_gl=1*52ll4t*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTkwNjUkajM1JGwwJGgw"
+ Aspect="AspectFill"
+ Opacity="0.45"/>
+                        <Button Text="5- Curiosidade animada!"
+  BackgroundColor="Transparent"
+  TextColor="#1B5E20"
+  FontAttributes="Bold"
+  FontSize="20"
+  Clicked="OnCuriosidadeClicked"/>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
 
         <!-- MENU HOME (ROW 2) -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">

@@ -1,4 +1,4 @@
-<ContentPage 
+<ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AppReciclique.MapaPage"
@@ -7,56 +7,37 @@
 
     <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO (ROW 0) -->
+        <!-- TOPO -->
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
-
-            <Label Text="←"
-               TextColor="White"
-               FontSize="20">
+            <Label Text="←" TextColor="White" FontSize="20">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnVoltarClicked"/>
                 </Label.GestureRecognizers>
             </Label>
-
             <Label Text="Mapa da Cidade"
-               TextColor="White"
-               FontSize="20"
-               FontAttributes="Bold"
-               HorizontalOptions="StartAndExpand"/>
-
+                   TextColor="White"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"/>
         </VerticalStackLayout>
 
-        <!-- CONTEÚDO (ROW 1) -->
-        <WebView x:Name="MapaWebView" Grid.Row="1" />
+        <!-- MAPA via WebView -->
+        <WebView x:Name="MapaWebView"
+                 Grid.Row="1" />
 
-        <!-- MENU INFERIOR (ROW 2) -->
+        <!-- MENU INFERIOR -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
-
-            <!-- LINHA VERDE -->
             <BoxView HeightRequest="2"
                      BackgroundColor="#2E7D32"
                      VerticalOptions="Start"/>
-
-            <!-- HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
-                                 Margin="10,10,0,0">
-
+            <VerticalStackLayout HorizontalOptions="Start" Margin="10,10,0,0">
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
-
-                <Label Text="🏠"
-                       FontSize="24"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="Home"
-                       FontSize="10"
-                       HorizontalOptions="Center"/>
-
+                <Label Text="🏠" FontSize="24" HorizontalOptions="Center"/>
+                <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
             </VerticalStackLayout>
-
         </Grid>
 
     </Grid>
-
 </ContentPage>

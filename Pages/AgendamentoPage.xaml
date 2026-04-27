@@ -18,9 +18,9 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="Agendamento Coleta"
+            <Label Text="AGENDAMENTO COLETA"
                    TextColor="White"
-                   FontSize="20"
+                   FontSize="15"
                    FontAttributes="Bold"/>
         </VerticalStackLayout>
 

@@ -23,6 +23,30 @@
                FontSize="20"
                HorizontalOptions="StartAndExpand"/>
 
+            
+
+        </VerticalStackLayout>
+
+        <!-- CONTEÚDO (ROW 1) -->
+        <VerticalStackLayout Grid.Row="1" Padding="20" Spacing="15">
+
+            <!-- ALTERADO PARA O PEDIDO:
+                 aqui aparecem as notificações do sistema -->
+            <CollectionView x:Name="cvNotificacoes">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White"
+                               CornerRadius="12"
+                               Padding="12"
+                               Margin="0,5">
+                            <Label Text="{Binding .}"
+                                   TextColor="#1B5E20"
+                                   FontSize="16" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
         </VerticalStackLayout>
 
 

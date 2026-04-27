@@ -24,8 +24,14 @@
 
             <Label Text="MINHA CONTA"
                    TextColor="White"
-                   FontSize="20"
-                   FontAttributes="Bold"/>
+                   FontSize="15"
+                   FontAttributes="Bold"
+                   HorizontalOptions="StartAndExpand"/>
+
+            <Label x:Name="lblBoasVindas"
+                   TextColor="White"
+                   FontSize="14"/>
+
         </VerticalStackLayout>
 
 
@@ -39,25 +45,60 @@
 
                     <VerticalStackLayout Spacing="10">
 
-                        <Label Text="Nome: João da Silva"
+                        <!-- ALTERADO: agora mostra o ID do usuário -->
+                        <Label x:Name="lblId"
                                FontSize="16"
                                TextColor="#1B5E20"/>
 
-                        <Label Text="Email: usuario@email.com"
+                        <!-- ALTERADO: agora mostra o nome do usuário logado -->
+                        <Label x:Name="lblNome"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#1B5E20"/>
+
+                        <!-- ALTERADO: agora mostra o e-mail do usuário logado -->
+                        <Label x:Name="lblEmail"
                                FontSize="16"
                                TextColor="#1B5E20"/>
 
-                        <Label Text="Data de nascimento: 17/01/1989"
+                        <!-- ALTERADO: agora mostra a data de nascimento do usuário logado -->
+                        <Label x:Name="lblNascimento"
                                FontSize="16"
                                TextColor="#1B5E20"/>
 
-                        <Label Text="Telefone: (14) 98841-5896"
+                        <!-- ALTERADO: agora mostra o telefone do usuário logado -->
+                        <Label x:Name="lblTelefone"
                                FontSize="16"
                                TextColor="#1B5E20"/>
+
+                        <!-- ALTERADO PARA O PEDIDO: endereço completo -->
+                        <Label x:Name="lblEndereco"
+                               FontSize="16"
+                               TextColor="#1B5E20"/>
+
+                        <!-- ALTERADO PARA O PEDIDO: CEP -->
+                        <Label x:Name="lblCep"
+                               FontSize="16"
+                               TextColor="#1B5E20"/>
+
+                        <!-- ALTERADO PARA O PEDIDO: plano gratuito -->
+                        <Label x:Name="lblPlano"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#2E7D32"/>
+
 
                     </VerticalStackLayout>
 
                 </Frame>
+
+                <!-- ALTERADO PARA O PEDIDO: texto institucional -->
+                <Label x:Name="lblApoio"
+                       Text="Aplicativo apoiado pela Prefeitura de Marília - SP"
+                       FontSize="12"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Gray"/>
+
 
             </VerticalStackLayout>
         </ScrollView>

@@ -16,4 +16,21 @@ public partial class PontuacaoPage : ContentPage
     {
         await Navigation.PopToRootAsync();
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        int pontos = AppState.Pontos;
+
+        AppState.VerificarNivel(); // 👈 CENTRALIZA
+
+        lblPontos.Text = pontos.ToString();
+        lblNivel.Text = AppState.NivelUsuario;
+        lblIconeNivel.Text = AppState.IconeNivel;
+    }
+
+      
+  
+
 }

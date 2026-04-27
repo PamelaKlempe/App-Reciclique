@@ -20,7 +20,8 @@
 
             <Label Text="NÍVEL 4 — ENTULHOS E MATERIAIS GRANDES"
            TextColor="white"
-           FontSize="20"/>
+           FontSize="12"
+           FontAttributes="Bold"/>
         </VerticalStackLayout>
 
 

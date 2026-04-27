@@ -20,7 +20,7 @@
 
             <Label Text="TRILHA VERDE"
                    TextColor="White"
-                   FontSize="20"
+                   FontSize="15"
                    FontAttributes="Bold"
                    HorizontalOptions="StartAndExpand"/>
 

@@ -14,21 +14,37 @@ public partial class Nivel1Page : ContentPage
 
     async void OnVidroClicked(object sender, EventArgs e)
     {
+        AppState.Pontos += 10;
+
+        await DisplayAlert("Parabéns!", "Você ganhou 10 pontos!", "OK");
+
         await Launcher.OpenAsync("https://www.youtube.com/watch?v=O50WI7aE2fI");
     }
 
-        async void OnPlasticoClicked(object sender, EventArgs e)
+    async void OnPlasticoClicked(object sender, EventArgs e)
     {
+        AppState.Pontos += 10;
+
+        await DisplayAlert("Parabéns!", "Você ganhou 10 pontos!", "OK");
+
         await Launcher.OpenAsync("https://www.youtube.com/watch?v=lgk52ealccs");
     }
 
     async void OnPapelClicked(object sender, EventArgs e)
     {
+        AppState.Pontos += 10;
+
+        await DisplayAlert("Parabéns!", "Você ganhou 10 pontos!", "OK");
+
         await Launcher.OpenAsync("https://www.youtube.com/watch?v=1Con8Yx6wO4");
     }
 
     async void OnMetalClicked(object sender, EventArgs e)
     {
+        AppState.Pontos += 10;
+
+        await DisplayAlert("Parabéns!", "Você ganhou 10 pontos!", "OK");
+
         await Launcher.OpenAsync("https://www.youtube.com/watch?v=2dGdG3s7u9A");
     }
 

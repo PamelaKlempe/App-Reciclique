@@ -29,12 +29,12 @@ public partial class MainPage : ContentPage
         string nivel;
         string icone;
 
-        if (pontos <= 70)
+        if (pontos <= 100)
         {
             nivel = "Bronze";
             icone = "🟤";
         }
-        else if (pontos <= 150)
+        else if (pontos <= 250)
         {
             nivel = "Prata";
             icone = "⚪";
@@ -44,7 +44,7 @@ public partial class MainPage : ContentPage
             nivel = "Ouro";
             icone = "🟡";
         }
-        else if (pontos <= 1000)
+        else if (pontos <= 1500)
         {
             nivel = "Platina";
             icone = "🔷";
