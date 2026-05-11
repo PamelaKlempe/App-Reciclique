@@ -83,8 +83,8 @@
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
 
-                            <Label x:Name="lblColeta"
-                                   Text="3"
+                            <Label x:Name="lblColetas"
+                                   Text="0"
                                    FontSize="24"
                                    FontAttributes="Bold"/>
                         </VerticalStackLayout>

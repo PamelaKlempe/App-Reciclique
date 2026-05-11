@@ -38,7 +38,7 @@
                          Aspect="AspectFill"
                          Opacity="0.45"/>
 
-                        <Button Text="1- O Que é?"
+                        <Button Text="1- O Que é Lixo Orgânico?"
                           BackgroundColor="Transparent"
                           TextColor="#1B5E20"
                           FontAttributes="Bold"
@@ -53,7 +53,7 @@
                         <Image Source="https://images.pexels.com/photos/31416063/pexels-photo-31416063.jpeg?_gl=1*1s0p72h*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzY4MTQxNDMkbzEkZzEkdDE3NzY4MTQyNzMkajU1JGwwJGgw"
                          Aspect="AspectFill"
                          Opacity="0.45"/>
-                        <Button Text="2- O Que é Compostagem?"
+                        <Button Text="2- O que é Compostagem?"
                           BackgroundColor="Transparent"
                           TextColor="#1B5E20"
                           FontAttributes="Bold"
@@ -83,7 +83,7 @@
                         <Image Source="https://images.pexels.com/photos/34118366/pexels-photo-34118366.jpeg?_gl=1*18myfvu*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzY4MTQxNDMkbzEkZzEkdDE3NzY4MTQzOTMkajMzJGwwJGgw"
                          Aspect="AspectFill"
                          Opacity="0.45"/>
-                        <Button Text="4- Como Funciona a Composteira?"
+                        <Button Text="4- Como funciona a Composteira?"
                           BackgroundColor="Transparent"
                           TextColor="#1B5E20"
                           FontAttributes="Bold"

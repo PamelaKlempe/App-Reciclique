@@ -27,6 +27,90 @@ FontAttributes="Bold"/>
 
 
         <!-- CONTEÚDO (ROW 1) -->
+        
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="18">
+
+                <!-- BOTÃO 1 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/7538360/pexels-photo-7538360.jpeg?_gl=1*1r4e65q*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzUwMDIkbzUkZzEkdDE3Nzc2NzUwMTAkajUyJGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+
+                        <Button Text="1- Como cuidar do Meio Ambiente?"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnComoClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 2 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/9543740/pexels-photo-9543740.jpeg?_gl=1*19asy2g*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzUwMDIkbzUkZzEkdDE3Nzc2NzUzNDkkajU5JGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+                        <Button Text="2- Por que cuidar do Meio Ambiente?"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnCuidarClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 3 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/36713478/pexels-photo-36713478.jpeg?_gl=1*1fg0g69*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzUwMDIkbzUkZzEkdDE3Nzc2NzUzOTUkajEzJGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+                        <Button Text="3- Curta - A Terra"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnCurtaClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 4 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/19507080/pexels-photo-19507080.jpeg?_gl=1*1uh39bk*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzUwMDIkbzUkZzEkdDE3Nzc2NzU0NDYkajM1JGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+                        <Button Text="4- Sungai Watch e seu Trabalho"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnCadeiraClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 5 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/8542545/pexels-photo-8542545.jpeg?_gl=1*7jkxfr*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzUwMDIkbzUkZzEkdDE3Nzc2NzU0ODQkajU5JGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+                        <Button Text="5- Pesquisa de Carlos Nobre"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnTempoClicked"/>
+                    </Grid>
+                </Frame>
+
+
+            </VerticalStackLayout>
+
+        </ScrollView>
 
 
         <!-- MENU HOME (ROW 2) -->

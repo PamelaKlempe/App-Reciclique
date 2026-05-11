@@ -64,6 +64,9 @@ public partial class AgendamentoPage : ContentPage
         // SALVA NO BANCO
         await db.SalvarAgendamento(novo);
 
+        // SALVA COLETAS
+        AppState.TotalColetas++;
+
         //  SALVA RESUMO
         string resumo = $"{data:dd/MM} às {hora}";
         AppState.UltimoAgendamento = resumo;
@@ -155,6 +158,7 @@ public partial class AgendamentoPage : ContentPage
         public string? bairro { get; set; }
         public string? localidade { get; set; }
     }
+    
     
 
 }

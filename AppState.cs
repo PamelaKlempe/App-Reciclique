@@ -13,6 +13,12 @@ namespace AppReciclique
             set => Preferences.Set($"pontos_{IdUsuario}", value);
         }
 
+        public static int TotalColetas
+        {
+            get => Preferences.Get($"coletas_{IdUsuario}", 0);
+            set => Preferences.Set($"coletas_{IdUsuario}", value);
+        }
+
 
         public static int IdUsuario { get; set; }
         public static string NomeUsuario { get; set; } = "";
@@ -84,6 +90,7 @@ namespace AppReciclique
             }
 
         }
+        
 
      
     }

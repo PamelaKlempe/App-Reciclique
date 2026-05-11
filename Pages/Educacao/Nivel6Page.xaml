@@ -27,6 +27,89 @@ FontAttributes="Bold"/>
 
 
         <!-- CONTEÚDO (ROW 1) -->
+        
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="18">
+
+                <!-- BOTÃO 1 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/7048268/pexels-photo-7048268.jpeg?_gl=1*18gzp55*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY0MjkkajI4JGwwJGgw"
+                      Aspect="AspectFill"
+                      Opacity="0.45"/>
+                        <Button Text="1- Artesanato com Papel"
+                       BackgroundColor="Transparent"
+                       TextColor="#1B5E20"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       Clicked="OnPaperClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 2 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/15168177/pexels-photo-15168177.jpeg?_gl=1*f0uq9m*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY2NjQkajE4JGwwJGgw"
+                     Aspect="AspectFill"
+                     Opacity="0.45"/>
+                        <Button Text="2- Colheres de Plástico"
+                      BackgroundColor="Transparent"
+                      TextColor="#1B5E20"
+                      FontAttributes="Bold"
+                      FontSize="20"
+                      Clicked="OnColheresClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 3 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/3958209/pexels-photo-3958209.jpeg?_gl=1*1kzph5h*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY3NzEkajI0JGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+                        <Button Text="3- Rolinho de Papel"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnOvelhaClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 4 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/31871212/pexels-photo-31871212.jpeg?_gl=1*5ooc1c*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDcwMTQkajU2JGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+                        <Button Text="4- Arte com Entulho"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnArteClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 5 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?_gl=1*1rerj1t*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY5NDUkajQzJGwwJGgw"
+         Aspect="AspectFill"
+         Opacity="0.45"/>
+                        <Button Text="5- Ideias para Brinquedos"
+          BackgroundColor="Transparent"
+          TextColor="#1B5E20"
+          FontAttributes="Bold"
+          FontSize="20"
+          Clicked="OnIdeiaClicked"/>
+                    </Grid>
+                </Frame>
+
+
+            </VerticalStackLayout>
+
+        </ScrollView>
 
 
         <!-- MENU HOME (ROW 2) -->

@@ -28,6 +28,103 @@
 
         <!-- CONTEÚDO (ROW 1) -->
 
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="18">
+
+                <!-- BOTÃO 1 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/30387768/pexels-photo-30387768.jpeg?_gl=1*1gt1gip*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAxNTckajUxJGwwJGgw"
+                        Aspect="AspectFill"
+                        Opacity="0.45"/>
+
+                        <Button Text="1- Como são Gerados?"
+                         BackgroundColor="Transparent"
+                         TextColor="#1B5E20"
+                         FontAttributes="Bold"
+                         FontSize="20"
+                         Clicked="OnComoClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 2 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/15822215/pexels-photo-15822215.jpeg?_gl=1*1v376bo*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAxOTgkajEwJGwwJGgw"
+                        Aspect="AspectFill"
+                        Opacity="0.45"/>
+                        <Button Text="2- Entulhos: Descarte nas Obras"
+                         BackgroundColor="Transparent"
+                         TextColor="#1B5E20"
+                         FontAttributes="Bold"
+                         FontSize="20"
+                         Clicked="OnAspiradorClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 3 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/26098429/pexels-photo-26098429.jpeg?_gl=1*1g5knmh*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAyNDAkajU3JGwwJGgw"
+                        Aspect="AspectFill"
+                        Opacity="0.45"/>
+                        <Button Text="3- Para onde vão os Entulhos?"
+                         BackgroundColor="Transparent"
+                         TextColor="#1B5E20"
+                         FontAttributes="Bold"
+                         FontSize="20"
+                         Clicked="OnOndeClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 4 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/28041688/pexels-photo-28041688.jpeg?_gl=1*1fmlgbv*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAyNzIkajI1JGwwJGgw"
+                        Aspect="AspectFill"
+                        Opacity="0.45"/>
+                        <Button Text="4- EcoPontos"
+                         BackgroundColor="Transparent"
+                         TextColor="#1B5E20"
+                         FontAttributes="Bold"
+                         FontSize="20"
+                         Clicked="OnEcoClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 5 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/30387772/pexels-photo-30387772.jpeg?_gl=1*p4ai2p*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzA0MTkkajM2JGwwJGgw"
+                        Aspect="AspectFill"
+                        Opacity="0.45"/>
+                        <Button Text="5- Projeto: Recicla Entulho"
+                         BackgroundColor="Transparent"
+                         TextColor="#1B5E20"
+                         FontAttributes="Bold"
+                         FontSize="20"
+                         Clicked="OnProjetoClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 6 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.pexels.com/photos/28041688/pexels-photo-28041688.jpeg?_gl=1*1fmlgbv*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAyNzIkajI1JGwwJGgw"
+                        Aspect="AspectFill"
+                        Opacity="0.45"/>
+                        <Button Text="6- Trata Entulho"
+                         BackgroundColor="Transparent"
+                         TextColor="#1B5E20"
+                         FontAttributes="Bold"
+                         FontSize="20"
+                         Clicked="OnTrataClicked"/>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
 
         <!-- MENU HOME (ROW 2) -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">

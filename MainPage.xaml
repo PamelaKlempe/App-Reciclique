@@ -53,7 +53,7 @@
                 <!-- COLETAS -->
                 <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50">
                     <Label Text="🚮" FontSize="17"/>
-                    <Label Text="3" FontSize="14"  FontAttributes="Bold" TextColor="#1B5E20" HorizontalOptions="Center"/>
+                    <Label x:Name="lblColetas" Text="0" FontSize="14"  FontAttributes="Bold" TextColor="#1B5E20" HorizontalOptions="Center"/>
 
                 </VerticalStackLayout>
 
@@ -142,7 +142,13 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame WidthRequest="80" HeightRequest="80" Margin="3" CornerRadius="3" Padding="5" BackgroundColor="#F9F9F9" HasShadow="False">
-                                <Image Source="{Binding}" Aspect="AspectFit"/>
+                                <Image Source="{Binding}" Aspect="AspectFit">
+
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBannerClicked"/>
+                                    </Image.GestureRecognizers>
+
+                                </Image>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

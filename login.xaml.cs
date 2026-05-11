@@ -95,9 +95,7 @@ public partial class LoginPage : ContentPage
         AppState.AdicionarNotificacao("Você ganhou 30 pontos");
         AppState.AdicionarNotificacao("Parabéns! Você subiu de nível");
 
-        await DisplayAlert("Sucesso", "Login realizado!", "OK");
 
-        await DisplayAlert("Sucesso", "Login realizado!", "OK");
 
         Application.Current.MainPage = new NavigationPage(new MainPage());
     }

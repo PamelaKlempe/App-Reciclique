@@ -90,13 +90,68 @@ public partial class MainPage : ContentPage
 
         lblPontos.Text = pontos.ToString();
 
+        lblColetas.Text = AppState.TotalColetas.ToString();
+
         lblNivel.Text = AppState.NivelUsuario;
         lblIconeNivel.Text = AppState.IconeNivel;
 
         lblSaudacao.Text = $"Olá, {AppState.NomeUsuario}";
     }
 
-  
+    private async void OnBannerClicked(object sender, EventArgs e)
+    {
+        var image = sender as Image;
+
+        if (image?.Source is FileImageSource fileSource)
+        {
+            string banner = fileSource.File;
+
+            switch (banner)
+            {
+                case "banner1.jpg":
+                    await Launcher.Default.OpenAsync("https://www.uber.com/br/pt-br/");
+                    break;
+
+                case "banner2.jpg":
+                    await Launcher.Default.OpenAsync("https://www.marilia.sp.gov.br/");
+                    break;
+
+                case "banner3.jpg":
+                    await Launcher.Default.OpenAsync("https://www.ifood.com.br/");
+                    break;
+
+                case "banner4.jpg":
+                    await Launcher.Default.OpenAsync("https://99app.com/");
+                    break;
+
+                case "banner5.jpg":
+                    await Launcher.Default.OpenAsync("https://www.nike.com.br/");
+                    break;
+
+                case "banner6.jpg":
+                    await Launcher.Default.OpenAsync("https://www.americanas.com.br/");
+                    break;
+
+                case "banner7.jpg":
+                    await Launcher.Default.OpenAsync("https://www.riachuelo.com.br/");
+                    break;
+
+                case "banner8.jpg":
+                    await Launcher.Default.OpenAsync("https://www.semparar.com.br/");
+                    break;
+
+                case "banner9.jpg":
+                    await Launcher.Default.OpenAsync("https://www.magazineluiza.com.br/");
+                    break;
+
+                case "banner10.jpg":
+                    await Launcher.Default.OpenAsync("https://www.credpam.com.br/");
+                    break;
+            }
+        }
+    }
+
+
 }
 
 
