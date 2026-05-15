@@ -151,6 +151,16 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private async void OnTutorialClicked(object sender, EventArgs e)
+    {
+        await Launcher.Default.OpenAsync("https://www.youtube.com/results?search_query=flores+com+colheres+plasticas");
+    }
+
+    private async void OnQuizClicked(object sender, EventArgs e)
+    {
+        await DisplayAlert("Quiz Sustentável", "Em breve teremos um quiz interativo sobre sustentabilidade! 🌱", "OK");
+    }
+
 
 }
 

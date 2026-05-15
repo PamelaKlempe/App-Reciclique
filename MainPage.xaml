@@ -154,6 +154,63 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
 
+                <!-- DICAS E QUIZ -->
+                <VerticalStackLayout Margin="10,15,10,20" Spacing="12">
+
+                    <!-- CARD ARTESANATO -->
+                    <Frame BackgroundColor="#E8F5E9"
+           CornerRadius="15"
+           Padding="15"
+           HasShadow="True">
+
+                        <VerticalStackLayout Spacing="8">
+
+                            <Label Text="🌸 Flores com Colheres Plásticas"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   TextColor="#1B5E20"/>
+
+                            <Label Text="Aprenda a transformar colheres descartáveis em flores decorativas sustentáveis."
+                   FontSize="13"
+                   TextColor="#444"/>
+
+                            <Button Text="Ver Tutorial"
+                    BackgroundColor="#2E7D32"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    Clicked="OnTutorialClicked"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- CARD QUIZ -->
+                    <Frame BackgroundColor="#F1F8E9"
+           CornerRadius="15"
+           Padding="15"
+           HasShadow="True">
+
+                        <VerticalStackLayout Spacing="8">
+
+                            <Label Text="♻️ Teste Seus Conhecimentos"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   TextColor="#33691E"/>
+
+                            <Label Text="Descubra quanto você sabe sobre reciclagem e sustentabilidade."
+                   FontSize="13"
+                   TextColor="#444"/>
+
+                            <Button Text="Fazer Quiz"
+                    BackgroundColor="#558B2F"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    Clicked="OnQuizClicked"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                </VerticalStackLayout>
+
             </VerticalStackLayout>
         </ScrollView>
 
