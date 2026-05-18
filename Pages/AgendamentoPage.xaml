@@ -5,26 +5,30 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
+
+   <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhaspadrao2.jpeg"
+      Aspect="AspectFill"
+      Opacity="15"/>
+
+      <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- TOPO -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
+            <VerticalStackLayout 
+    BackgroundColor="Transparent" 
+   Spacing="5"
+    Padding="20,40,20,0"
+    Grid.Row="0">
 
-            <Label Text="←"
-                   TextColor="White"
-                   FontSize="20">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
+                <Label Text=  "Agendamento Coletas"
+       TextColor="#1f6b3a"
+       FontSize="25"
+       FontAttributes="Bold"/>
 
-            <Label Text="Agendamento de Coleta"
-                   TextColor="White"
-                   FontSize="16"
-                   FontAttributes="Bold"/>
-        </VerticalStackLayout>
+            </VerticalStackLayout>
 
-        <!-- CONTEÚDO -->
+            <!-- CONTEÚDO -->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Padding="25" Spacing="15">
 
@@ -115,31 +119,34 @@
                IsVisible="False"
                Opacity="0"/>
 
-        <!-- MENU INFERIOR -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
-            <BoxView HeightRequest="2"
-                     BackgroundColor="#2E7D32"
-                     VerticalOptions="Start"/>
+
+      
+       
+       
+        <!-- MENU INFERIOR -->
+        <Grid Grid.Row="2" BackgroundColor="#f8f8f4" Padding="5">
+
+           
 
             <VerticalStackLayout HorizontalOptions="Start"
-                                 Margin="10,10,0,0">
+                                 Margin="10,2,0,0">
 
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label Text="🏠"
-                       FontSize="24"
+                       FontSize="25"
                        HorizontalOptions="Center"/>
 
-                <Label Text="Home"
-                       FontSize="10"
-                       HorizontalOptions="Center"/>
+               
 
             </VerticalStackLayout>
 
         </Grid>
+
+       </Grid>
 
     </Grid>
 

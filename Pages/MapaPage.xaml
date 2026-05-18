@@ -4,40 +4,47 @@
     x:Class="AppReciclique.MapaPage"
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
+    
+    
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhaspadrao2.jpeg"
+               Aspect="AspectFill"
+               Opacity="0.80"/>
 
-    <Grid RowDefinitions="Auto,*,Auto">
+        <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- TOPO -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
-            <Label Text="←" TextColor="White" FontSize="20">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
-            <Label Text="Mapa da Cidade"
-                   TextColor="White"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Start"/>
-        </VerticalStackLayout>
+            <VerticalStackLayout 
+ BackgroundColor="Transparent" 
+Spacing="5"
+ Padding="30,30,20,0"
+ Grid.Row="0">
 
-        <!-- MAPA via WebView -->
+                <Label Text=  "Mapa da Cidade"
+    TextColor="#1f6b3a"
+    FontSize="25"
+    FontAttributes="Bold"/>
+
+            </VerticalStackLayout>
+
+
+            <!-- MAPA via WebView -->
         <WebView x:Name="MapaWebView"
                  Grid.Row="1" />
 
         <!-- MENU INFERIOR -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
-            <BoxView HeightRequest="2"
-                     BackgroundColor="#2E7D32"
-                     VerticalOptions="Start"/>
+        <Grid Grid.Row="2" BackgroundColor="#f8f8f4" Padding="3">
+            
             <VerticalStackLayout HorizontalOptions="Start" Margin="10,10,0,0">
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
                 <Label Text="🏠" FontSize="24" HorizontalOptions="Center"/>
-                <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
+               
             </VerticalStackLayout>
         </Grid>
+    </Grid>
 
     </Grid>
 </ContentPage>

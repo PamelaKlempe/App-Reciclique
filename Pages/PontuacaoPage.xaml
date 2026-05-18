@@ -5,160 +5,174 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhaspadrao.jpeg"
+      Aspect="AspectFill"
+        Opacity="0.90"/>
 
-            <Label Text="←"
-                   TextColor="White"
-                   FontSize="20">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
 
-            <Label Text="MEUS PONTOS"
-                   TextColor="White"
-                   FontSize="16"
-                   FontAttributes="Bold"/>
 
-        </VerticalStackLayout>
+        <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- CONTEÚDO -->
-        <ScrollView Grid.Row="1">
+            <!-- TOPO -->
+            <VerticalStackLayout 
+ BackgroundColor="Transparent" 
+Spacing="5"
+ Padding="20,30,20,0"
+ Grid.Row="0">
 
-            <VerticalStackLayout Padding="20" Spacing="20">
+                <Label Text=  "Meus Pontos"
+    TextColor="#1f6b3a"
+    FontSize="25"
+    FontAttributes="Bold"/>
 
-                <!-- PONTOS -->
-                <Frame CornerRadius="20" BackgroundColor="#E8F5E9" Padding="15">
-                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+            </VerticalStackLayout>
 
-                        <Label Text="🏆" FontSize="35"/>
+     
 
-                        <VerticalStackLayout>
-                            <Label Text="Total de Pontos"
+            <!-- CONTEÚDO -->
+            <ScrollView Grid.Row="1">
+
+                <VerticalStackLayout Padding="20" Spacing="20">
+
+                    <!-- PONTOS -->
+                    <Frame CornerRadius="20" BackgroundColor="#E8F5E9" Padding="15">
+                        <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+
+                            <Image Source="medalha.png"
+                                HeightRequest="55"
+                                WidthRequest="55"
+                                HorizontalOptions="Center"/>
+
+                            <VerticalStackLayout>
+                                <Label Text="Total de Pontos"
                                    FontSize="16"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
 
-                            <Label x:Name="lblPontos"
+                                <Label x:Name="lblPontos"
                                    FontSize="28"
                                    FontAttributes="Bold"/>
-                        </VerticalStackLayout>
+                            </VerticalStackLayout>
 
-                    </HorizontalStackLayout>
-                </Frame>
+                        </HorizontalStackLayout>
+                    </Frame>
 
-                <!-- NÍVEL -->
-                <Frame CornerRadius="20" BackgroundColor="#E3F2FD" Padding="15">
-                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+                    <!-- NÍVEL -->
+                    <Frame CornerRadius="20" BackgroundColor="#E3F2FD" Padding="15">
+                        <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
 
-                        <Label x:Name="lblIconeNivel"
-                               FontSize="35"/>
+                            <Image x:Name="imgNivel"
+                            HeightRequest="55"
+                            WidthRequest="55"
+                            HorizontalOptions="Center"/>
 
-                        <VerticalStackLayout>
-                            <Label Text="Meu Nível"
+                            <VerticalStackLayout>
+                                <Label Text="Meu Nível"
                                    FontSize="16"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
 
-                            <Label x:Name="lblNivel"
+                                <Label x:Name="lblNivel"
                                    FontSize="24"
                                    FontAttributes="Bold"/>
-                        </VerticalStackLayout>
+                            </VerticalStackLayout>
 
-                    </HorizontalStackLayout>
-                </Frame>
+                        </HorizontalStackLayout>
+                    </Frame>
 
-                <!-- COLETAS -->
-                <Frame CornerRadius="20" BackgroundColor="#FFF3E0" Padding="15">
-                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+                    <!-- COLETAS -->
+                    <Frame CornerRadius="20" BackgroundColor="#FFF3E0" Padding="15">
+                        <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
 
-                        <Label Text="🗑️" FontSize="35"/>
+                            <Image Source= "coletas.png"
+                             HeightRequest="55"
+                               WidthRequest="55"
+                             HorizontalOptions="Center"/>
 
-                        <VerticalStackLayout>
-                            <Label Text="Total de Coletas"
+                            <VerticalStackLayout>
+                                <Label Text="Total de Coletas"
                                    FontSize="16"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
 
-                            <Label x:Name="lblColetas"
+                                <Label x:Name="lblColetas"
                                    Text="0"
                                    FontSize="24"
                                    FontAttributes="Bold"/>
-                        </VerticalStackLayout>
+                            </VerticalStackLayout>
 
-                    </HorizontalStackLayout>
-                </Frame>
+                        </HorizontalStackLayout>
+                    </Frame>
 
-                <!-- EXPLICAÇÃO -->
-                <Frame CornerRadius="15" BackgroundColor="#F1F8E9" Padding="15">
+                    <!-- EXPLICAÇÃO -->
+                    <Frame CornerRadius="15" BackgroundColor="#F1F8E9" Padding="15">
 
-                    <VerticalStackLayout Spacing="12">
+                        <VerticalStackLayout Spacing="12">
 
-                        <Label Text="Entenda seus pontos"
+                            <Label Text="Entenda seus pontos"
                                FontAttributes="Bold"
                                FontSize="18"
                                TextColor="#2E7D32"/>
 
-                        <!-- AGENDAMENTO -->
-                        <Label Text="🚮 Ganhe pontos ao agendar coletas:"
+                            <!-- AGENDAMENTO -->
+                            <Label Text="🚮 Ganhe pontos ao agendar coletas:"
                                FontAttributes="Bold"
                                FontSize="16"/>
 
-                        <VerticalStackLayout Spacing="2">
-                            <Label Text="✔️ 30 pontos para cada coleta normal" FontSize="15"/>
-                            <Label Text="✔️ 50 pontos para cada Super Coleta" FontSize="15"/>
+                            <VerticalStackLayout Spacing="2">
+                                <Label Text="✔️ 30 pontos para cada coleta normal" FontSize="15"/>
+                                <Label Text="✔️ 50 pontos para cada Super Coleta" FontSize="15"/>
+                            </VerticalStackLayout>
+
+                            <!-- EDUCAÇÃO -->
+                            <Label Text="♻️ Ganhe pontos ao acessar conteúdos educativos:"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+
+                            <Label Text="✔️ A cada etapa da trilha educativa acessada você ganha pontos e sobe de nível"
+                               FontSize="15"
+                               LineBreakMode="WordWrap"/>
+
+                            <!-- BENEFÍCIOS -->
+                            <Label Text="🎁 Troque seus pontos por benefícios:"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+
+                            <Label Text="✔️ Acumule pontos e troque por cashback e recompensas em nossas lojas parceiras"
+                               FontSize="15"
+                               LineBreakMode="WordWrap"/>
+
                         </VerticalStackLayout>
 
-                        <!-- EDUCAÇÃO -->
-                        <Label Text="♻️ Ganhe pontos ao acessar conteúdos educativos:"
-                               FontAttributes="Bold"
-                               FontSize="16"/>
+                    </Frame>
 
-                        <Label Text="✔️ A cada etapa da trilha educativa acessada você ganha pontos e sobe de nível"
-                               FontSize="15"
-                               LineBreakMode="WordWrap"/>
+                </VerticalStackLayout>
 
-                        <!-- BENEFÍCIOS -->
-                        <Label Text="🎁 Troque seus pontos por benefícios:"
-                               FontAttributes="Bold"
-                               FontSize="16"/>
+            </ScrollView>
 
-                        <Label Text="✔️ Acumule pontos e troque por cashback e recompensas em nossas lojas parceiras"
-                               FontSize="15"
-                               LineBreakMode="WordWrap"/>
+            <!-- MENU -->
+            <Grid Grid.Row="2" BackgroundColor="#f8f8f4" Padding="5">
 
-                    </VerticalStackLayout>
 
-                </Frame>
 
-            </VerticalStackLayout>
-
-        </ScrollView>
-
-        <!-- MENU -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
-
-            <BoxView HeightRequest="2"
-                     BackgroundColor="#2E7D32"
-                     VerticalOptions="Start"/>
-
-            <VerticalStackLayout HorizontalOptions="Start"
+                <VerticalStackLayout HorizontalOptions="Start"
                                  Margin="10,10,0,0">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠" FontSize="24"/>
-                <Label Text="Home" FontSize="10"/>
+                    <Label Text="🏠" FontSize="25"/>
 
-            </VerticalStackLayout>
+
+                </VerticalStackLayout>
+
+            </Grid>
 
         </Grid>
-
     </Grid>
 
 </ContentPage>

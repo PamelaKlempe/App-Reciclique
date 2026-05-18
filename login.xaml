@@ -4,25 +4,39 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#F5F5F5">
 
-    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+  <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhaslogin.png"
+        Aspect="AspectFill"
+        Opacity="0.85"/>
+
+      <VerticalStackLayout Padding="40" Spacing="7" VerticalOptions="Start">
 
         <!-- LOGO -->
         <Image Source="logo.png"
                HorizontalOptions="Center"
-               HeightRequest="120"
+               HeightRequest="180"
                Aspect="AspectFit"/>
 
-        <!-- TÍTULO -->
-        <Label Text="Bem-vindo"
-               FontSize="24"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               TextColor="#2E7D32"/>
 
-        <!-- EMAIL -->
-        <Frame CornerRadius="12"
-               BackgroundColor="White"
-               Padding="10">
+            <Label Text="Bem-vindo!"
+       FontSize="18"
+       FontAttributes="Bold"
+       TextColor="#1B365D"
+       HorizontalOptions="Center"/>
+
+            <Label Text="Faça login para continuar sua jornada sustentável."
+       FontSize="12"
+       TextColor="#707070"
+       HorizontalTextAlignment="Center"
+       Margin="0,0,0,1"/>
+
+
+
+            <!-- EMAIL -->
+        <Frame CornerRadius="16"
+               BackgroundColor="#f9ffffff"
+               Padding="8">
 
             <Entry x:Name="txtEmail"
                    Placeholder="E-mail"
@@ -31,9 +45,9 @@
         </Frame>
 
         <!-- SENHA -->
-        <Frame CornerRadius="12"
-               BackgroundColor="White"
-               Padding="10">
+        <Frame CornerRadius="16"
+               BackgroundColor="#f9ffffff"
+               Padding="8">
 
             <Entry x:Name="txtSenha"
                    Placeholder="Senha"
@@ -43,12 +57,14 @@
 
         <!-- BOTÃO -->
         <Button Text="Entrar"
-                BackgroundColor="#2E7D32"
+                BackgroundColor="#388E3C"
                 TextColor="White"
-                CornerRadius="10"
+                CornerRadius="16"
                 HeightRequest="50"
                 Clicked="OnLoginClicked"/>
 
-    </VerticalStackLayout>
+      </VerticalStackLayout>
 
+  </Grid>
+    
 </ContentPage>

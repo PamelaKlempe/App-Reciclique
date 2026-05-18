@@ -158,7 +158,7 @@ public partial class AgendamentoPage : ContentPage
         public string? bairro { get; set; }
         public string? localidade { get; set; }
     }
-    
-    
+
+
 
 }

@@ -1,5 +1,4 @@
-﻿using Microsoft.Maui.Storage;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 namespace AppReciclique
 {
@@ -57,27 +56,27 @@ namespace AppReciclique
             if (pontos <= 100)
             {
                 nivel = "Bronze";
-                icone = "🟤";
+                icone = "bronze.png";
             }
             else if (pontos <= 250)
             {
                 nivel = "Prata";
-                icone = "⚪";
+                icone = "prata.png";
             }
             else if (pontos <= 400)
             {
                 nivel = "Ouro";
-                icone = "🟡";
+                icone = "ouro.png";
             }
             else if (pontos <= 1500)
             {
                 nivel = "Platina";
-                icone = "🔷";
+                icone = "platina.png";
             }
             else
             {
                 nivel = "Diamante";
-                icone = "💎";
+                icone = "diamante.png";
             }
 
 
@@ -90,8 +89,8 @@ namespace AppReciclique
             }
 
         }
-        
 
-     
+
+
     }
 }

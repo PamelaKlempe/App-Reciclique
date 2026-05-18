@@ -25,15 +25,15 @@ public partial class PontuacaoPage : ContentPage
 
         int pontos = AppState.Pontos;
 
-     
+
 
         lblPontos.Text = pontos.ToString();
         lblNivel.Text = AppState.NivelUsuario;
-        lblIconeNivel.Text = AppState.IconeNivel;
+        imgNivel.Source = AppState.IconeNivel;
         lblColetas.Text = AppState.TotalColetas.ToString();
     }
 
-      
-  
+
+
 
 }

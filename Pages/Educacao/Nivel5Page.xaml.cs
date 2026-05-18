@@ -2,10 +2,10 @@ namespace AppReciclique.Pages.Educacao;
 
 public partial class Nivel5Page : ContentPage
 {
-	public Nivel5Page()
-	{
-		InitializeComponent();
-	}
+    public Nivel5Page()
+    {
+        InitializeComponent();
+    }
 
     private async void OnVoltarClicked(object sender, EventArgs e)
     {

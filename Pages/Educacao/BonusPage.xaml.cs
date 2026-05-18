@@ -2,10 +2,10 @@ namespace AppReciclique.Pages.Educacao;
 
 public partial class BonusPage : ContentPage
 {
-	public BonusPage()
-	{
-		InitializeComponent();
-	}
+    public BonusPage()
+    {
+        InitializeComponent();
+    }
 
     private async void OnHomeClicked(object sender, EventArgs e)
     {

@@ -5,105 +5,107 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO -->
-        <VerticalStackLayout BackgroundColor="#2E7D32"
-                             Padding="10"
-                             Spacing="5"
-                             Grid.Row="0">
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhasajuda.jpeg"
+            Aspect="AspectFill"
+              Opacity="0.90"/>
 
-            <Label Text="←"
-                   TextColor="White"
-                   FontSize="20">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
 
-            <Label Text="Ajuda e Suporte"
-                   TextColor="White"
-                   FontSize="16"
-                   FontAttributes="Bold"/>
-        </VerticalStackLayout>
+        <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- CONTEÚDO -->
-        <ScrollView Grid.Row="1">
+            <!-- TOPO -->
+            <VerticalStackLayout 
+ BackgroundColor="Transparent" 
+Spacing="5"
+ Padding="20,20,20,0"
+ Grid.Row="0">
 
-            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text=  "Ajuda e Suporte"
+    TextColor="#1f6b3a"
+    FontSize="25"
+    FontAttributes="Bold"/>
 
-                <!-- TEXTO -->
-                <Label Text="Precisa de ajuda? Preencha o formulário ou entre em contato:"
+            </VerticalStackLayout>
+
+            <!-- CONTEÚDO -->
+            <ScrollView Grid.Row="1">
+
+                <VerticalStackLayout Padding="20" Spacing="9">
+
+                    <!-- TEXTO -->
+                    <Label Text="Precisa de ajuda? Preencha o formulário ou entre em contato:"
                        FontSize="14"
                        TextColor="Gray"/>
 
-                <!-- CONTATO -->
-                <Frame BackgroundColor="White"
+                    <!-- CONTATO -->
+                    <Frame BackgroundColor="White"
                        CornerRadius="12"
                        Padding="10">
 
-                    <VerticalStackLayout Spacing="5">
+                        <VerticalStackLayout Spacing="5">
 
-                        <Label Text="📞 (14) 99999-0000"
+                            <Label Text="📞 (14) 3400-0101"
                                FontSize="14"
                                TextColor="#2E7D32"/>
 
-                        <Label Text="📧 suporte@reciclique.com"
+                            <Label Text="📧 suporte@reciclique.com"
                                FontSize="14"
                                TextColor="#2E7D32"/>
 
-                    </VerticalStackLayout>
+                        </VerticalStackLayout>
 
-                </Frame>
+                    </Frame>
 
-                <!-- FORMULÁRIO -->
-                <Entry Placeholder="Seu nome"
+                    <!-- FORMULÁRIO -->
+                    <Entry Placeholder="Seu nome"
                        x:Name="txtNome"/>
 
-                <Entry Placeholder="Seu e-mail"
+                    <Entry Placeholder="Seu e-mail"
                        Keyboard="Email"
                        x:Name="txtEmail"/>
 
-                <Entry Placeholder="Telefone"
+                    <Entry Placeholder="Telefone"
                        Keyboard="Telephone"
                        x:Name="txtTelefone"/>
 
-                <Editor Placeholder="Digite sua dúvida ou sugestão..."
-                        HeightRequest="120"
+                    <Editor Placeholder="Digite sua dúvida ou sugestão..."
+                        HeightRequest="100"
                         x:Name="txtMensagem"/>
 
-                <!-- BOTÃO -->
-                <Button Text="Enviar"
+                    <!-- BOTÃO -->
+                    <Button Text="Enviar"
                         BackgroundColor="#2E7D32"
                         TextColor="White"
                         CornerRadius="8"
                         Clicked="OnEnviarClicked"/>
 
-            </VerticalStackLayout>
+                </VerticalStackLayout>
 
-        </ScrollView>
+            </ScrollView>
 
-        <!-- MENU -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+            <!-- MENU -->
+            <Grid Grid.Row="2" BackgroundColor="#F8f8f4" Padding="1">
 
-            <BoxView HeightRequest="2"
-                     BackgroundColor="#2E7D32"
-                     VerticalOptions="Start"/>
+                
 
-            <VerticalStackLayout HorizontalOptions="Start"
+                <VerticalStackLayout HorizontalOptions="Start"
                                  Margin="10,10,0,0">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠" FontSize="24"/>
-                <Label Text="Home" FontSize="10"/>
+                    <Label Text="🏠" FontSize="24"/>
+                   
 
-            </VerticalStackLayout>
+                </VerticalStackLayout>
+
+            </Grid>
 
         </Grid>
-
+        
     </Grid>
 
 </ContentPage>

@@ -5,171 +5,171 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhaspadrao2.jpeg"
+           Aspect="AspectFill"
+           Opacity="0.98"/>
 
-            <Label Text="←"
-                   TextColor="White"
-                   FontSize="20">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
+        <Grid RowDefinitions="Auto,*,Auto">
 
-            <Label Text="TRILHA VERDE"
-                   TextColor="White"
-                   FontSize="15"
-                   FontAttributes="Bold"
-                   HorizontalOptions="StartAndExpand"/>
+            <!-- TOPO -->
+            <VerticalStackLayout 
+ BackgroundColor="Transparent" 
+Spacing="5"
+ Padding="20,40,20,0"
+ Grid.Row="0">
 
-        </VerticalStackLayout>
+                <Label Text=  "Trilha Educativa"
+    TextColor="#1f6b3a"
+    FontSize="25"
+    FontAttributes="Bold"/>
 
-        <!-- CONTEÚDO -->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Spacing="15" Padding="10">
+            </VerticalStackLayout>
 
-                <!-- NÍVEL 1 -->
-                <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Nível 1 — O Básico da Reciclagem" FontAttributes="Bold"/>
-                        <Button Text="Acessar"
+
+            <!-- CONTEÚDO -->
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Spacing="15" Padding="10">
+
+                    <!-- NÍVEL 1 -->
+                    <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Nível 1 — O Básico da Reciclagem" FontAttributes="Bold"/>
+                            <Button Text="Acessar"
                                 FontAttributes="Bold"
                                 BackgroundColor="#66BB6A"
                                 TextColor="White"
                                 Clicked="Nivel1_Clicked"/>
-                        <Image Source="nivel1.jpg"
+                            <Image Source="nivel1.jpg"
                                HeightRequest="100"
                                Aspect="AspectFill"
                                Margin="0,10,0,0"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                <!-- NÍVEL 2 -->
-                <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Nível 2 — Lixo Orgânico e Alimentos" FontAttributes="Bold"/>
-                        <Button Text="Acessar"
+                    <!-- NÍVEL 2 -->
+                    <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Nível 2 — Lixo Orgânico e Alimentos" FontAttributes="Bold"/>
+                            <Button Text="Acessar"
                                 FontAttributes="Bold"
                                 BackgroundColor="#66BB6A"
                                 TextColor="White"
                                 Clicked="Nivel2_Clicked"/>
-                        <Image Source="nivel2.png"
+                            <Image Source="nivel2.png"
                                HeightRequest="100"
                                Aspect="AspectFill"
                                Margin="0,10,0,0"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                <!-- NÍVEL 3 -->
-                <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Nível 3 — Resíduos Perigosos" FontAttributes="Bold"/>
-                        <Button Text="Acessar"
+                    <!-- NÍVEL 3 -->
+                    <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Nível 3 — Resíduos Perigosos" FontAttributes="Bold"/>
+                            <Button Text="Acessar"
                                 FontAttributes="Bold"
                                 BackgroundColor="#66BB6A"
                                 TextColor="White"
                                 Clicked="Nivel3_Clicked"/>
-                        <Image Source="nivel3.png"
+                            <Image Source="nivel3.png"
                                HeightRequest="100"
                                Aspect="AspectFill"
                                Margin="0,10,0,0"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                <!-- NÍVEL 4 -->
-                <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Nível 4 — Entulhos e Materiais Grandes" FontAttributes="Bold"/>
-                        <Button Text="Acessar"
+                    <!-- NÍVEL 4 -->
+                    <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Nível 4 — Entulhos e Materiais Grandes" FontAttributes="Bold"/>
+                            <Button Text="Acessar"
                                 FontAttributes="Bold"
                                 BackgroundColor="#66BB6A"
                                 TextColor="White"
                                 Clicked="Nivel4_Clicked"/>
-                        <Image Source="nivel4.png"
+                            <Image Source="nivel4.png"
                                HeightRequest="100"
                                Aspect="AspectFill"
                                Margin="0,10,0,0"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                <!-- NÍVEL 5 -->
-                <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Nível 5 — Ação na Prática (Mutirão)" FontAttributes="Bold"/>
-                        <Button Text="Acessar"
+                    <!-- NÍVEL 5 -->
+                    <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Nível 5 — Ação na Prática (Mutirão)" FontAttributes="Bold"/>
+                            <Button Text="Acessar"
                                 FontAttributes="Bold"
                                 BackgroundColor="#66BB6A"
                                 TextColor="White"
                                 Clicked="Nivel5_Clicked"/>
-                        <Image Source="nivel5.png"
+                            <Image Source="nivel5.png"
                                HeightRequest="120"
                                Aspect="AspectFill"
                                Margin="0,10,0,0"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                <!-- NÍVEL 6 -->
-                <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Nível 6 — Reutilização Criativa" FontAttributes="Bold"/>
-                        <Button Text="Acessar"
+                    <!-- NÍVEL 6 -->
+                    <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Nível 6 — Reutilização Criativa" FontAttributes="Bold"/>
+                            <Button Text="Acessar"
                                 BackgroundColor="#66BB6A"
                                 TextColor="White"
                                 Clicked="Nivel6_Clicked"/>
-                        <Image Source="nivel6.png"
+                            <Image Source="nivel6.png"
                                HeightRequest="120"
                                Aspect="AspectFill"
                                Margin="0,10,0,0"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                <!-- BÔNUS -->
-                <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Bônus — Casa Sustentável" FontAttributes="Bold"/>
-                        <Button Text="Acessar"
+                    <!-- BÔNUS -->
+                    <Frame CornerRadius="12" BackgroundColor="White" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Bônus — Casa Sustentável" FontAttributes="Bold"/>
+                            <Button Text="Acessar"
                                 FontAttributes="Bold"
                                 BackgroundColor="#66BB6A"
                                 TextColor="White"
                                 Clicked="Bonus_Clicked"/>
-                        <Image Source="bonus.png"
+                            <Image Source="bonus.png"
                                HeightRequest="120"
                                Aspect="AspectFill"
                                Margin="0,10,0,0"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-            </VerticalStackLayout>
-        </ScrollView>
+                </VerticalStackLayout>
+            </ScrollView>
 
-        <!-- MENU -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+            <!-- MENU -->
+            <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
 
-            <BoxView HeightRequest="2"
-                     BackgroundColor="#2E7D32"
-                     VerticalOptions="Start"/>
 
-            <VerticalStackLayout HorizontalOptions="Start"
-                                 Margin="10,10,0,0">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+                <VerticalStackLayout HorizontalOptions="Start"
+                                 Margin="10,0,0,0">
 
-                <Label Text="🏠"
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="🏠"
                        FontSize="24"
                        HorizontalOptions="Center"/>
 
-                <Label Text="Home"
-                       FontSize="10"
-                       HorizontalOptions="Center"/>
 
-            </VerticalStackLayout>
+
+                </VerticalStackLayout>
+
+            </Grid>
 
         </Grid>
-
     </Grid>
 
 </ContentPage>

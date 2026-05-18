@@ -5,167 +5,165 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO -->
-        <VerticalStackLayout 
-            BackgroundColor="#2E7D32" 
-            Padding="15"
-            Spacing="10"
-            Grid.Row="0">
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhasconta.jpeg"
+        Aspect="AspectFill"
+          Opacity="0.90"/>
 
-            <Label Text="←"
-                   TextColor="White"
-                   FontSize="20">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
+        <Grid RowDefinitions="Auto,*,Auto">
 
-            <Label Text="MINHA CONTA"
-                   TextColor="White"
-                   FontSize="16"
+            <!-- TOPO -->
+            <VerticalStackLayout 
+                BackgroundColor="Transparent" 
+               Spacing="5"
+                Padding="20,20,20,0"
+                Grid.Row="0">
+
+                <Label Text=  " Minha Conta"
+                   TextColor="#1f6b3a"
+                   FontSize="25"
                    FontAttributes="Bold"/>
 
+            </VerticalStackLayout>
 
-        </VerticalStackLayout>
+            <!-- CONTEÚDO -->
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Padding="20" Spacing="20">
 
-        <!-- CONTEÚDO -->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="25" Spacing="20">
-
-                <Frame BackgroundColor="White"
-                       CornerRadius="15"
+                    <Frame BackgroundColor="White"
+                       CornerRadius="30"
                        Padding="20">
 
-                    <VerticalStackLayout Spacing="12">
+                        <VerticalStackLayout Spacing="12">
 
-                        <!-- TÍTULO -->
-                        <Label Text="Dados do Usuário"
-                               FontSize="18"
+                            <!-- TÍTULO -->
+                            <Label Text="Dados do Usuário"
+                               FontSize="15"
                                FontAttributes="Bold"
-                               TextColor="#2E7D32"/>
+                               TextColor="#1B365D"/>
 
-                        <!-- ID -->
-                        <HorizontalStackLayout>
-                            <Label Text="ID:"
+                            <!-- ID -->
+                            <HorizontalStackLayout>
+                                <Label Text="ID:"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
-                            <Label x:Name="lblId"/>
-                        </HorizontalStackLayout>
+                                <Label x:Name="lblId"/>
+                            </HorizontalStackLayout>
 
-                        <!-- NOME -->
-                        <HorizontalStackLayout>
-                            <Label Text="Nome:"
+                            <!-- NOME -->
+                            <HorizontalStackLayout>
+                                <Label Text="Nome:"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
-                            <Label x:Name="lblNome"/>
-                        </HorizontalStackLayout>
+                                <Label x:Name="lblNome"/>
+                            </HorizontalStackLayout>
 
-                        <!-- EMAIL -->
-                        <HorizontalStackLayout>
-                            <Label Text="Email:"
+                            <!-- EMAIL -->
+                            <HorizontalStackLayout>
+                                <Label Text="Email:"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
-                            <Label x:Name="lblEmail"/>
-                        </HorizontalStackLayout>
+                                <Label x:Name="lblEmail"/>
+                            </HorizontalStackLayout>
 
-                        <!-- NASCIMENTO -->
-                        <HorizontalStackLayout>
-                            <Label Text="Nascimento:"
+                            <!-- NASCIMENTO -->
+                            <HorizontalStackLayout>
+                                <Label Text="Nascimento:"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
-                            <Label x:Name="lblNascimento"/>
-                        </HorizontalStackLayout>
+                                <Label x:Name="lblNascimento"/>
+                            </HorizontalStackLayout>
 
-                        <!-- TELEFONE -->
-                        <HorizontalStackLayout>
-                            <Label Text="Telefone:"
+                            <!-- TELEFONE -->
+                            <HorizontalStackLayout>
+                                <Label Text="Telefone:"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
-                            <Label x:Name="lblTelefone"/>
-                        </HorizontalStackLayout>
+                                <Label x:Name="lblTelefone"/>
+                            </HorizontalStackLayout>
 
-                        <!-- ENDEREÇO -->
-                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="5">
+                            <!-- ENDEREÇO -->
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="5">
 
-                            <Label Text="Endereço:"
+                                <Label Text="Endereço:"
            FontAttributes="Bold"
            TextColor="#2E7D32"
            Grid.Column="0"/>
 
-                            <Label x:Name="lblEndereco"
+                                <Label x:Name="lblEndereco"
            Grid.Column="1"
            LineBreakMode="WordWrap"/>
 
-                        </Grid>
+                            </Grid>
 
-                        <!-- CEP -->
-                        <HorizontalStackLayout>
-                            <Label Text="CEP:"
+                            <!-- CEP -->
+                            <HorizontalStackLayout>
+                                <Label Text="CEP:"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
-                            <Label x:Name="lblCep"/>
-                        </HorizontalStackLayout>
+                                <Label x:Name="lblCep"/>
+                            </HorizontalStackLayout>
 
-                        <!-- PLANO -->
-                        <HorizontalStackLayout>
-                            <Label Text="Plano:"
+                            <!-- PLANO -->
+                            <HorizontalStackLayout>
+                                <Label Text="Plano:"
                                    FontAttributes="Bold"
                                    TextColor="#2E7D32"/>
-                            <Label x:Name="lblPlano"
+                                <Label x:Name="lblPlano"
                                    FontAttributes="Bold"/>
-                        </HorizontalStackLayout>
+                            </HorizontalStackLayout>
 
-                    </VerticalStackLayout>
+                        </VerticalStackLayout>
 
-                </Frame>
+                    </Frame>
 
-                <!-- TEXTO INSTITUCIONAL -->
-                <Label Text="Aplicativo apoiado pela Prefeitura de Marília - SP"
+                    <!-- TEXTO INSTITUCIONAL -->
+                    <Label Text="Apoio Prefeitura de Marília - SP"
                        FontSize="12"
                        HorizontalTextAlignment="Center"
                        TextColor="Gray"/>
 
-            </VerticalStackLayout>
-        </ScrollView>
+                </VerticalStackLayout>
+            </ScrollView>
 
-        <!-- RODAPÉ -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10"
+            <!-- RODAPÉ -->
+            <Grid Grid.Row="2" BackgroundColor="#f8f8f4" Padding="2"
               ColumnDefinitions="*,Auto">
 
-            <BoxView Grid.ColumnSpan="2"
-                     HeightRequest="2"
-                     BackgroundColor="#2E7D32"
-                     VerticalOptions="Start"/>
+               
 
-            <!-- HOME -->
-            <VerticalStackLayout Grid.Column="0"
+                <!-- HOME -->
+                <VerticalStackLayout Grid.Column="0"
                                  HorizontalOptions="Start"
-                                 Margin="10,10,0,0">
+                                 Margin="10,8,0,10">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠" FontSize="24"/>
-                <Label Text="Home" FontSize="10"/>
+                    <Label Text="🏠" FontSize="24"/>
 
-            </VerticalStackLayout>
 
-            <!-- BOTÃO SAIR -->
-            <Button Grid.Column="1"
-                    Text="Sair"
-                    Clicked="OnLogoutClicked"
-                    BackgroundColor="#D32F2F"
-                    TextColor="White"
-                    HeightRequest="40"
-                    WidthRequest="80"
-                    CornerRadius="8"
-                    VerticalOptions="Center"
-                    Margin="0,10,10,0"/>
+                </VerticalStackLayout>
+
+                <!-- BOTÃO SAIR -->
+                <Button Grid.Column="1"
+        Text="Sair"
+        Clicked="OnLogoutClicked"
+        BackgroundColor="Transparent"
+        BorderWidth="0"
+        Shadow="{x:Null}"
+        TextColor="#C62828"
+        FontAttributes="Bold"
+        FontSize="18"
+        Padding="0"
+        Margin="0,0,10,10"
+        HorizontalOptions="End"/>
+
+            </Grid>
 
         </Grid>
-
     </Grid>
 </ContentPage>

@@ -5,109 +5,112 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
-
-        <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
-
-            <Label Text="←"
-           TextColor="White"
-           FontSize="20">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
-
-            <Label Text="BONUS — CASA SUSTENTÁVEL"
-                TextColor="white"
-                FontSize="12"
-                FontAttributes="Bold"/>
-            
-        </VerticalStackLayout>
 
 
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhasapadrao.jpeg"
+               Aspect="AspectFill"
+               Opacity="0.40"/>
 
-        <!-- CONTEÚDO (ROW 1) -->
+        <Grid RowDefinitions="Auto,*,Auto">
 
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="18">
+            <!-- TOPO (ROW 0) -->
+            <VerticalStackLayout 
+ BackgroundColor="Transparent" 
+Spacing="5"
+ Padding="20,20,20,0"
+ Grid.Row="0">
 
-                <Frame CornerRadius="18" HeightRequest="140">
-            <Grid>
-                <Image Source="https://images.pexels.com/photos/34053427/pexels-photo-34053427.jpeg?_gl=1*1nq1qhz*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDc0OTkkajI5JGwwJGgw"
+                <Label Text=  "CASA SUSTENTÁVEL"
+    TextColor="#1B365D"
+    FontSize="15"
+    FontAttributes="Bold"/>
+
+            </VerticalStackLayout>
+
+
+          
+
+
+
+            <!-- CONTEÚDO (ROW 1) -->
+
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Padding="20" Spacing="18">
+
+                    <Frame CornerRadius="18" HeightRequest="140">
+                        <Grid>
+                            <Image Source="https://images.pexels.com/photos/34053427/pexels-photo-34053427.jpeg?_gl=1*1nq1qhz*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDc0OTkkajI5JGwwJGgw"
                Aspect="AspectFill"
                Opacity="0.45"/>
-                <Button Text="1- Como ter uma Casa Sustentável?"
+                            <Button Text="1- Como ter uma Casa Sustentável?"
                 BackgroundColor="Transparent"
                 TextColor="#1B5E20"
                 FontAttributes="Bold"
                 FontSize="20"
                 Clicked="OnComoClicked"/>
-            </Grid>
-        </Frame>
+                        </Grid>
+                    </Frame>
 
-        <!-- BOTÃO 2 -->
-        <Frame CornerRadius="18" HeightRequest="140">
-            <Grid>
-                <Image Source="https://images.pexels.com/photos/37159656/pexels-photo-37159656.jpeg?_gl=1*qk2ts7*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDg3NjgkajQ3JGwwJGgw"
+                    <!-- BOTÃO 2 -->
+                    <Frame CornerRadius="18" HeightRequest="140">
+                        <Grid>
+                            <Image Source="https://images.pexels.com/photos/37159656/pexels-photo-37159656.jpeg?_gl=1*qk2ts7*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDg3NjgkajQ3JGwwJGgw"
               Aspect="AspectFill"
               Opacity="0.45"/>
-                <Button Text="2- Dicas"
+                            <Button Text="2- Dicas"
                  BackgroundColor="Transparent"
                  TextColor="#1B5E20"
                  FontAttributes="Bold"
                  FontSize="20"
                  Clicked="OnIdeiasClicked"/>
-            </Grid>
-        </Frame>
+                        </Grid>
+                    </Frame>
 
-        <!-- BOTÃO 3 -->
-        <Frame CornerRadius="18" HeightRequest="140">
-            <Grid>
-                <Image Source="https://images.pexels.com/photos/6683673/pexels-photo-6683673.jpeg?_gl=1*1cu2fla*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDg4MjkkajU5JGwwJGgw"
+                    <!-- BOTÃO 3 -->
+                    <Frame CornerRadius="18" HeightRequest="140">
+                        <Grid>
+                            <Image Source="https://images.pexels.com/photos/6683673/pexels-photo-6683673.jpeg?_gl=1*1cu2fla*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDg4MjkkajU5JGwwJGgw"
                Aspect="AspectFill"
                Opacity="0.45"/>
-                <Button Text="3- Hora do Quiz!!!"
+                            <Button Text="3- Hora do Quiz!!!"
                  BackgroundColor="Transparent"
                  TextColor="#1B5E20"
                  FontAttributes="Bold"
                  FontSize="20"
                  Clicked="OnQuizClicked"/>
-            </Grid>
-        </Frame>
+                        </Grid>
+                    </Frame>
 
 
-        </VerticalStackLayout>
+                </VerticalStackLayout>
 
-        </ScrollView>
+            </ScrollView>
 
 
-        <!-- 🏠 MENU HOME (ROW 2) -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+            <!-- 🏠 MENU HOME (ROW 2) -->
+            <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
 
-            <!-- LINHA VERDE -->
-            <BoxView HeightRequest="2"
-             BackgroundColor="#2E7D32"
-             VerticalOptions="Start"/>
+              
 
-            <!-- BOTÃO HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
-                         Margin="10,10,0,0">
+                <!-- BOTÃO HOME -->
+                <VerticalStackLayout HorizontalOptions="Start"
+                         Margin="10,0,0,0">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠"
+                    <Label Text="🏠"
                FontSize="24"
                HorizontalOptions="Center"/>
 
-                <Label Text="Home"
-               FontSize="10"
-               HorizontalOptions="Center"/>
+               
 
-            </VerticalStackLayout>
+                </VerticalStackLayout>
 
+            </Grid>
         </Grid>
 
     </Grid>

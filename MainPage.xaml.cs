@@ -24,7 +24,7 @@ public partial class MainPage : ContentPage
         carouselParceiros.ItemsSource = parceiros;
     }
 
-    
+
 
     private async void OnAgendarClicked(object sender, EventArgs e)
     {
@@ -93,7 +93,7 @@ public partial class MainPage : ContentPage
         lblColetas.Text = AppState.TotalColetas.ToString();
 
         lblNivel.Text = AppState.NivelUsuario;
-        lblIconeNivel.Text = AppState.IconeNivel;
+        imgIconeNivel.Source = AppState.IconeNivel;
 
         lblSaudacao.Text = $"Olá, {AppState.NomeUsuario}";
     }
@@ -151,9 +151,9 @@ public partial class MainPage : ContentPage
         }
     }
 
-    private async void OnTutorialClicked(object sender, EventArgs e)
+    private async void OnInstagramClicked(object sender, EventArgs e)
     {
-        await Launcher.Default.OpenAsync("https://www.youtube.com/results?search_query=flores+com+colheres+plasticas");
+        await Launcher.Default.OpenAsync("https://www.instagram.com/recicliqueapp/");
     }
 
     private async void OnQuizClicked(object sender, EventArgs e)

@@ -8,21 +8,17 @@
   <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
+        <VerticalStackLayout 
+    BackgroundColor="Transparent" 
+    Spacing="5"
+    Padding="20,20,20,0"
+    Grid.Row="0">
 
-            <Label Text="←"
-                TextColor="White"
-                FontSize="20"
-                FontAttributes="Bold">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
+            <Label Text=  "NÍVEL 2 — LIXO ORGÂNICO E ALIMENTO"
+    TextColor="#1B365D"
+    FontSize="13"
+    FontAttributes="Bold"/>
 
-            <Label Text="NÍVEL 2 — LIXO ORGÂNICO E ALIMENTO"
-           TextColor="white"
-           FontSize="12"
-           FontAttributes="Bold"/>
         </VerticalStackLayout>
 
 
@@ -96,12 +92,8 @@
         </ScrollView>
 
         <!-- MENU INFERIOR (ROW 2) -->
-    <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+    <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
 
-        <!-- LINHA VERDE -->
-        <BoxView HeightRequest="2"
-             BackgroundColor="#2E7D32"
-             VerticalOptions="Start"/>
 
         <!-- BOTÃO HOME -->
         <VerticalStackLayout HorizontalOptions="Start"
@@ -115,9 +107,7 @@
                FontSize="24"
                HorizontalOptions="Center"/>
 
-            <Label Text="Home"
-               FontSize="10"
-               HorizontalOptions="Center"/>
+        
 
         </VerticalStackLayout>
 
