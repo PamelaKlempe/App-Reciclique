@@ -51,12 +51,12 @@ public partial class Nivel3Page : ContentPage
 
         await Launcher.OpenAsync("https://www.youtube.com/watch?v=VSmXSEHRL3E");
     }
-    async void OnCuriosidadeClicked(object sender, EventArgs e)
+    async void OnEletronicoClicked(object sender, EventArgs e)
     {
         AppState.Pontos += 20;
 
         await DisplayAlert("Parabéns!", "Você ganhou 20 pontos!", "OK");
 
-        await Launcher.OpenAsync("https://www.youtube.com/watch?v=sfa-jnXtA84");
+        await Launcher.OpenAsync("https://youtube.com/shorts/Ufrr53m9piA?si=NeKzeKhsbjGn8UuE");
     }
 }

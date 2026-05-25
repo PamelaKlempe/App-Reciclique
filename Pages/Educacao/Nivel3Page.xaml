@@ -1,132 +1,225 @@
 <ContentPage 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.Pages.Educacao.Nivel3Page"
-    NavigationPage.HasNavigationBar="False"
-    BackgroundColor="#F5F5F5">
-
-    <Grid RowDefinitions="Auto,*,Auto">
-
-        <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout 
- BackgroundColor="Transparent" 
-    Spacing="5"
- Padding="20,20,20,0"
- Grid.Row="0">
-
-            <Label Text=  "NIVEL 3 - RESÍDUOS PERIGOSOS"
-                   TextColor="#1B365D"
-            FontSize="15"
-            FontAttributes="Bold"/>
-
-        </VerticalStackLayout>
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="AppReciclique.Pages.Educacao.Nivel3Page"
+	NavigationPage.HasNavigationBar="False"
+	BackgroundColor="#F5F5F5">
 
 
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhabonus.jpeg"
+		   Aspect="AspectFill"
+		   Opacity="0.98"/>
 
-        <!-- CONTEÚDO (ROW 1) -->
+        <Grid RowDefinitions="Auto,*,Auto">
 
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="18">
+            <!-- TOPO (ROW 0) -->
+            <VerticalStackLayout 
+				BackgroundColor="Transparent" 
+				Spacing="5"
+				Padding="0,35,0,0"
+				Grid.Row="0">
 
-                <!-- BOTÃO 1 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/2768961/pexels-photo-2768961.jpeg?_gl=1*1k8cjui*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTk5MzIkajQ5JGwwJGgw"
-                Aspect="AspectFill"
-                Opacity="0.45"/>
+                <Label Text="♻️ NÍVEL 3"
+				   TextColor="#1B365D"
+				   FontSize="23"
+				   HorizontalOptions="Center"
+				   FontFamily="MontserratExtraBold"
+				   FontAttributes="Bold"/>
 
-                        <Button Text="1- O que é Perigosos?"
-                 BackgroundColor="Transparent"
-                 TextColor="#1B5E20"
-                 FontAttributes="Bold"
-                 FontSize="20"
-                 Clicked="OnOqueClicked"/>
-                    </Grid>
-                </Frame>
+                <Label Text="RESÍDUOS PERIGOSOS"
+				   TextColor="#1B364A"
+				   FontSize="15"
+				   HorizontalOptions="Center"
+				   FontFamily="MontserratExtraBold"
+				   FontAttributes="Bold"/>
 
-                <!-- BOTÃO 2 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/3806781/pexels-photo-3806781.jpeg?_gl=1*18w7yby*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTk5OTMkajUxJGwwJGgw"
-                Aspect="AspectFill"
-                Opacity="0.45"/>
-                        <Button Text="2- O que é Resíduos Tóxicos?"
-                 BackgroundColor="Transparent"
-                 TextColor="#1B5E20"
-                 FontAttributes="Bold"
-                 FontSize="20"
-                 Clicked="OnToxicoClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 3 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/15369763/pexels-photo-15369763.jpeg?_gl=1*2bq8ac*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNjAyMTUkajUkbDAkaDA."
-                Aspect="AspectFill"
-                Opacity="0.45"/>
-                        <Button Text="3- Classificação e como tratar?"
-                 BackgroundColor="Transparent"
-                 TextColor="#1B5E20"
-                 FontAttributes="Bold"
-                 FontSize="20"
-                 Clicked="OnTratarClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 4 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/8770242/pexels-photo-8770242.jpeg?_gl=1*y649fj*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTk1MDEkajM0JGwwJGgw"
-                Aspect="AspectFill"
-                Opacity="0.45"/>
-                        <Button Text="4-  NBR 10004 - Fluxograma"
-                 BackgroundColor="Transparent"
-                 TextColor="#1B5E20"
-                 FontAttributes="Bold"
-                 FontSize="20"
-                 Clicked="OnIdentifcarClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 5 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/34054388/pexels-photo-34054388.jpeg?_gl=1*52ll4t*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3NzcxNTg0NzkkbzIkZzEkdDE3NzcxNTkwNjUkajM1JGwwJGgw"
- Aspect="AspectFill"
- Opacity="0.45"/>
-                        <Button Text="5- Curiosidade Animada!"
-  BackgroundColor="Transparent"
-  TextColor="#1B5E20"
-  FontAttributes="Bold"
-  FontSize="20"
-  Clicked="OnCuriosidadeClicked"/>
-                    </Grid>
-                </Frame>
-
-            </VerticalStackLayout>
-        </ScrollView>
-
-        <!-- MENU HOME (ROW 2) -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
-
-
-            <!-- BOTÃO HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
-                         Margin="10,0,0,0">
-
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
-
-                <Label Text="🏠"
-               FontSize="24"
-               HorizontalOptions="Center"/>
-
-             
+                <BoxView HeightRequest="3"
+					 WidthRequest="300"
+					 Color="#7FA87C"
+					 CornerRadius="4"
+					 HorizontalOptions="Center"/>
 
             </VerticalStackLayout>
 
+
+            <!-- CONTEÚDO (ROW 1) -->
+            <ScrollView Grid.Row="1">
+
+                <VerticalStackLayout Padding="20" Spacing="18">
+
+                    <!-- CARD 1 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="1️⃣ - O que é Perigoso?"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="perigoso.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnOqueClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 2 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">	
+
+                        <VerticalStackLayout>
+
+                            <Label Text="2️⃣ - Resíduos Tóxicos"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="toxicos.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnToxicoClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 3 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="3️⃣ - Classificação e Tratamento"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="tratamento.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTratarClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 4 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="4️⃣ - NBR 10004"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="nbr.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnIdentifcarClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 5 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="5️⃣ - Lixo Eletrônico"
+					   FontFamily="MontserratExtraBold"
+					   FontAttributes="Bold"
+					   FontSize="18"
+					   TextColor="#1B5E20"/>
+
+                            <Image Source="lixoeletronico.jpg"
+					   HeightRequest="110"
+					   Aspect="AspectFill"
+					   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnEletronicoClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                </VerticalStackLayout>
+
+            </ScrollView>
+
+
+            <!-- MENU HOME (ROW 2) -->
+            <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
+
+
+                <!-- BOTÃO HOME -->
+                <VerticalStackLayout HorizontalOptions="Start"
+						 Margin="10,0,0,0">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="🏠"
+			   FontSize="24"
+			   HorizontalOptions="Center"/>
+
+
+
+                </VerticalStackLayout>
+
+            </Grid>
         </Grid>
 
     </Grid>

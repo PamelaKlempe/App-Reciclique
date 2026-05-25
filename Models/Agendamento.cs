@@ -9,11 +9,11 @@ namespace AppReciclique.Models
 
         public int IdUsuario { get; set; }
 
-        public string Tipo { get; set; }
-        public string Endereco { get; set; }
+        public string Tipo { get; set; } = string.Empty;
+        public string Endereco { get; set; } = string.Empty;
         public DateTime Data { get; set; }
-        public string Hora { get; set; }
-        public string Telefone { get; set; }
-        public string Observacao { get; set; }
+        public string Hora { get; set; } = string.Empty;
+        public string Telefone { get; set; } = string.Empty;
+        public string Observacao { get; set; } = string.Empty;
     }
 }

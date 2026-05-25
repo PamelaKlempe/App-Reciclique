@@ -44,4 +44,13 @@ public partial class BonusPage : ContentPage
         await Launcher.OpenAsync("https://pt.quizur.com/trivia/quiz-de-reciclagem-IfI2");
     }
 
+    async void OnLixoClicked(object sender, EventArgs e)
+    {
+        AppState.Pontos += 50;
+
+        await DisplayAlert("Parabéns!", "Você ganhou 50 pontos!", "OK");
+
+    await Launcher.OpenAsync("https://www.youtube.com/watch?v=sfa-jnXtA84");
+}
+
 }

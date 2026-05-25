@@ -5,51 +5,44 @@
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-
     <Grid>
         <!-- FUNDO -->
         <Image Source="folhanotificacao.jpeg"
-        Aspect="AspectFill"
-          Opacity="0.90"/>
-
+               Aspect="AspectFill"
+               Opacity="0.90"/>
 
         <Grid RowDefinitions="Auto,*,Auto">
 
             <!-- TOPO -->
             <VerticalStackLayout 
- BackgroundColor="Transparent" 
-Spacing="5"
- Padding="20,20,20,0"
- Grid.Row="0">
+                BackgroundColor="Transparent" 
+                Spacing="5"
+                Padding="20,20,20,0"
+                Grid.Row="0">
 
-                <Label Text=  "Notificações"
-    TextColor="#1f6b3a"
-    FontSize="25"
-    FontAttributes="Bold"/>
-
+                <Label Text="Notificações"
+                       TextColor="#1f6b3a"
+                       FontSize="25"
+                       FontAttributes="Bold"/>
             </VerticalStackLayout>
-
 
             <!-- LISTA DE NOTIFICAÇÕES -->
             <CollectionView Grid.Row="1"
-                        x:Name="cvNotificacoes"
-                        Margin="20">
+                            x:Name="cvNotificacoes"
+                            Margin="20">
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-
+                    <!-- Specify the item type so bindings can be compiled -->
+                    <DataTemplate x:DataType="x:String">
                         <Frame BackgroundColor="White"
-                           CornerRadius="12"
-                           Padding="12"
-                           Margin="0,5">
-
+                               CornerRadius="12"
+                               Padding="12"
+                               Margin="0,5">
                             <Label Text="{Binding .}"
-                               TextColor="#1B5E20"
-                               FontSize="16"
-                               LineBreakMode="WordWrap"/>
-
+                                   TextColor="#1B5E20"
+                                   FontSize="16"
+                                   LineBreakMode="WordWrap"/>
                         </Frame>
-
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
@@ -57,20 +50,13 @@ Spacing="5"
 
             <!-- MENU -->
             <Grid Grid.Row="2" BackgroundColor="#f8f8f4" Padding="5">
-
-
                 <VerticalStackLayout HorizontalOptions="Start"
-                                 Margin="10,0,0,0">
-
+                                     Margin="10,0,0,0">
                     <VerticalStackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnHomeClicked"/>
                     </VerticalStackLayout.GestureRecognizers>
-
                     <Label Text="🏠" FontSize="25"/>
-
-
                 </VerticalStackLayout>
-
             </Grid>
 
         </Grid>

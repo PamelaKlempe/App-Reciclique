@@ -4,12 +4,16 @@ namespace AppReciclique
 {
     public static class AppState
     {
-        public static string UltimoAgendamento { get; set; }
+        public static string UltimoAgendamento { get; set; } = "";
 
         public static int Pontos
         {
             get => Preferences.Get($"pontos_{IdUsuario}", 0);
-            set => Preferences.Set($"pontos_{IdUsuario}", value);
+            set
+            {
+                Preferences.Set($"pontos_{IdUsuario}", value);
+                VerificarNivel();
+            }
         }
 
         public static int TotalColetas
@@ -44,6 +48,9 @@ namespace AppReciclique
 
         public static void VerificarNivel()
         {
+            if (IdUsuario <= 0)
+                return;
+
             string nivelAnterior = NivelUsuario;
 
             int pontos = Pontos;

@@ -1,138 +1,228 @@
 <ContentPage 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.Pages.Educacao.Nivel6Page"
-    NavigationPage.HasNavigationBar="False"
-    BackgroundColor="#F5F5F5">
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="AppReciclique.Pages.Educacao.Nivel6Page"
+	NavigationPage.HasNavigationBar="False"
+	BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
-
-        <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout 
-    BackgroundColor="Transparent"
-   Spacing="5"
-    Padding="20,20,20,0"
-    Grid.Row="0">
-
-            <Label Text=  "NIVEL 6 - REUTILIZAÇÃO CRIATIVA"
-                  TextColor="#1B365D"
-           FontSize="13"
-           FontAttributes="Bold"/>
-
-        </VerticalStackLayout>
+	<Grid>
+		<!-- FUNDO -->
+		<Image Source="folhabonus.jpeg"
+		   Aspect="AspectFill"
+		   Opacity="1"/>
 
 
 
-        <!-- CONTEÚDO (ROW 1) -->
-        
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="18">
+		<Grid RowDefinitions="Auto,*,Auto">
 
-                <!-- BOTÃO 1 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/7048268/pexels-photo-7048268.jpeg?_gl=1*18gzp55*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY0MjkkajI4JGwwJGgw"
-                      Aspect="AspectFill"
-                      Opacity="0.45"/>
-                        <Button Text="1- Artesanato com Papel"
-                       BackgroundColor="Transparent"
-                       TextColor="#1B5E20"
-                       FontAttributes="Bold"
-                       FontSize="20"
-                       Clicked="OnPaperClicked"/>
-                    </Grid>
-                </Frame>
+			<!-- TOPO (ROW 0) -->
+			<VerticalStackLayout 
+				BackgroundColor="Transparent"
+				Spacing="5"
+				Padding="0,35,0,0"
+				Grid.Row="0">
 
-                <!-- BOTÃO 2 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/15168177/pexels-photo-15168177.jpeg?_gl=1*f0uq9m*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY2NjQkajE4JGwwJGgw"
-                     Aspect="AspectFill"
-                     Opacity="0.45"/>
-                        <Button Text="2- Colheres de Plástico"
-                      BackgroundColor="Transparent"
-                      TextColor="#1B5E20"
-                      FontAttributes="Bold"
-                      FontSize="20"
-                      Clicked="OnColheresClicked"/>
-                    </Grid>
-                </Frame>
+				<Label Text="♻️ NÍVEL 6"
+				   TextColor="#1B365D"
+				   FontSize="23"
+				   HorizontalOptions="Center"
+				   FontFamily="MontserratExtraBold"
+				   FontAttributes="Bold"/>
 
-                <!-- BOTÃO 3 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/3958209/pexels-photo-3958209.jpeg?_gl=1*1kzph5h*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY3NzEkajI0JGwwJGgw"
-         Aspect="AspectFill"
-         Opacity="0.45"/>
-                        <Button Text="3- Rolinho de Papel"
-          BackgroundColor="Transparent"
-          TextColor="#1B5E20"
-          FontAttributes="Bold"
-          FontSize="20"
-          Clicked="OnOvelhaClicked"/>
-                    </Grid>
-                </Frame>
+                <Label Text="REUTILIZAÇÃO CRIATIVA"
+				   TextColor="#1B364A"
+				   FontSize="15"
+				   HorizontalOptions="Center"
+				   FontFamily="MontserratExtraBold"
+				   FontAttributes="Bold"/>
 
-                <!-- BOTÃO 4 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/31871212/pexels-photo-31871212.jpeg?_gl=1*5ooc1c*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDcwMTQkajU2JGwwJGgw"
-         Aspect="AspectFill"
-         Opacity="0.45"/>
-                        <Button Text="4- Arte com Entulho"
-          BackgroundColor="Transparent"
-          TextColor="#1B5E20"
-          FontAttributes="Bold"
-          FontSize="20"
-          Clicked="OnArteClicked"/>
-                    </Grid>
-                </Frame>
+                <BoxView HeightRequest="3"
+					 WidthRequest="300"
+					 Color="#7FA87C"
+					 CornerRadius="4"
+					 HorizontalOptions="Center"/>
 
-                <!-- BOTÃO 5 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?_gl=1*1rerj1t*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc3NDYzOTckbzYkZzEkdDE3Nzc3NDY5NDUkajQzJGwwJGgw"
-         Aspect="AspectFill"
-         Opacity="0.45"/>
-                        <Button Text="5- Ideias para Brinquedos"
-          BackgroundColor="Transparent"
-          TextColor="#1B5E20"
-          FontAttributes="Bold"
-          FontSize="20"
-          Clicked="OnIdeiaClicked"/>
-                    </Grid>
-                </Frame>
+			</VerticalStackLayout>
 
 
-            </VerticalStackLayout>
+			<!-- CONTEÚDO (ROW 1) -->
+			<ScrollView Grid.Row="1">
 
-        </ScrollView>
+				<VerticalStackLayout Padding="20" Spacing="18">
+
+					<!-- CARD 1 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">	
+
+                        <VerticalStackLayout>
+
+                            <Label Text="1️⃣ - Artesanato com Papel"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="artepapel.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+						</VerticalStackLayout>
+
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnPaperClicked"/>
+						</Frame.GestureRecognizers>
+
+					</Frame>
+
+					<!-- CARD 2 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="2️⃣ - Colheres de Plástico"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="colheres.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnColheresClicked"/>
+						</Frame.GestureRecognizers>
+
+					</Frame>
+
+					<!-- CARD 3 -->
+					<Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+						<VerticalStackLayout>
+
+							<Label Text="3️⃣ - Rolinho de Papel"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="rolinho.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnOvelhaClicked"/>
+						</Frame.GestureRecognizers>
+
+					</Frame>
+
+					<!-- CARD 4 -->
+					<Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+						<VerticalStackLayout>
+
+                            <Label Text="4️⃣ - Arte com Entulho"
+						   FontFamily="MontserratExtraBold"
+						   FontAttributes="Bold"
+						   FontSize="18"
+						   TextColor="#1B5E20"/>
+
+                            <Image Source="arteentulho.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnArteClicked"/>
+						</Frame.GestureRecognizers>
+
+					</Frame>
+
+					<!-- CARD 5 -->
+					<Frame CornerRadius="18"
+						   BackgroundColor="#EEF5EA"
+						   BorderColor="#BFCDB8"
+						   Padding="15"
+						   Margin="0"
+						   HasShadow="True">
+
+						<VerticalStackLayout>
+
+                            <Label Text="5️⃣ - Ideias para Brinquedos"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="ideias.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+						</VerticalStackLayout>
+
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnIdeiaClicked"/>
+						</Frame.GestureRecognizers>
+
+					</Frame>
+
+				</VerticalStackLayout>
+
+			</ScrollView>
 
 
-        <!-- MENU HOME (ROW 2) -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="0">
-
-            
-            
-
-            <!-- BOTÃO HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
-              Margin="10,0,0,0">
-
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
-
-                <Label Text="🏠"
-    FontSize="24"
-    HorizontalOptions="Center"/>
+			<!-- MENU HOME (ROW 2) -->
+			<Grid Grid.Row="2" BackgroundColor="White" Padding="0">
 
 
-            </VerticalStackLayout>
 
-        </Grid>
 
-    </Grid>
-</ContentPage>
-    
-    
+				<!-- BOTÃO HOME -->
+				<VerticalStackLayout HorizontalOptions="Start"
+			  Margin="10,0,0,0">
+
+					<VerticalStackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnHomeClicked"/>
+					</VerticalStackLayout.GestureRecognizers>
+
+					<Label Text="🏠"
+						FontSize="24"
+						HorizontalOptions="Center"/>
+
+
+				</VerticalStackLayout>
+
+			</Grid>
+		</Grid>
+
+	</Grid>
+</ContentPage>        

@@ -1,152 +1,153 @@
 <ContentPage  
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.AgendamentoPage"
-    NavigationPage.HasNavigationBar="False"
-    BackgroundColor="#F5F5F5">
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="AppReciclique.AgendamentoPage"
+	NavigationPage.HasNavigationBar="False"
+	BackgroundColor="#F5F5F5">
 
 
-   <Grid>
+    <Grid>
         <!-- FUNDO -->
-        <Image Source="folhaspadrao2.jpeg"
-      Aspect="AspectFill"
-      Opacity="15"/>
+        <Image Source="folhaspadrao.jpeg"
+	        Aspect="AspectFill"
+	        Opacity="15"/>
 
-      <Grid RowDefinitions="Auto,*,Auto">
+        <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- TOPO -->
+            <!-- TOPO -->
             <VerticalStackLayout 
-    BackgroundColor="Transparent" 
-   Spacing="5"
-    Padding="20,40,20,0"
-    Grid.Row="0">
+	            BackgroundColor="Transparent" 
+                Spacing="5"
+	            Padding="20,40,20,0"
+	            Grid.Row="0">
 
                 <Label Text=  "Agendamento Coletas"
-       TextColor="#1f6b3a"
-       FontSize="25"
-       FontAttributes="Bold"/>
+	            TextColor="#1f6b3a"
+	            FontSize="25"
+	            FontAttributes="Bold"/>
 
             </VerticalStackLayout>
 
             <!-- CONTEÚDO -->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="25" Spacing="15">
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Padding="25" Spacing="15">
 
-                <!-- TIPO DE COLETA -->
-                <Label Text="Tipo de Coleta"/>
-                <Picker x:Name="pickerTipo">
-                    <Picker.Items>
-                        <x:String>Coleta Normal</x:String>
-                        <x:String>Super Coleta</x:String>
-                    </Picker.Items>
-                </Picker>
+                    <!-- TIPO DE COLETA -->
+                    <Label Text="Tipo de Coleta"/>
+                    <Picker x:Name="pickerTipo">
+                        <Picker.Items>
+                            <x:String>Coleta Normal</x:String>
+                            <x:String>Super Coleta</x:String>
+                        </Picker.Items>
+                    </Picker>
 
-                <!-- ENDEREÇO -->
-                <Label Text="CEP"/>
-                <Entry x:Name="txtCep"
-                       Placeholder="Digite o CEP"
-                       Keyboard="Numeric"
-                       Completed="OnBuscarCep"/>
+                    <!-- ENDEREÇO -->
+                    <Label Text="CEP"/>
+                    <Entry x:Name="txtCep"
+					   Placeholder="Digite o CEP"
+					   Keyboard="Numeric"
+					   TextChanged="OnCepTextChanged"
+					   Completed="OnBuscarCep"/>
 
-                <Label Text="Endereço"/>
-                <Entry x:Name="txtEndereco" Placeholder="Digite seu endereço"/>
+                    <Label Text="Endereço"/>
+                    <Entry x:Name="txtEndereco" Placeholder="Digite seu endereço"/>
 
-                <!-- NÚMERO -->
-                <Label Text="Número"/>
-                <Entry x:Name="txtNumero" Placeholder="Número"/>
+                    <!-- NÚMERO -->
+                    <Label Text="Número"/>
+                    <Entry x:Name="txtNumero" Placeholder="Número"/>
 
-                <!-- COMPLEMENTO -->
-                <Label Text="Complemento"/>
-                <Entry x:Name="txtComplemento" Placeholder="Ex: Casa, Apto, Bloco"/>
+                    <!-- COMPLEMENTO -->
+                    <Label Text="Complemento"/>
+                    <Entry x:Name="txtComplemento" Placeholder="Ex: Casa, Apto, Bloco"/>
 
-                <!-- DATA -->
-                <Label Text="Data"/>
-                <DatePicker x:Name="dataColeta"/>
+                    <!-- DATA -->
+                    <Label Text="Data"/>
+                    <DatePicker x:Name="dataColeta"/>
 
-                <!-- HORA -->
-                <Label Text="Hora"/>
-                <TimePicker x:Name="horaColeta"/>
+                    <!-- HORA -->
+                    <Label Text="Hora"/>
+                    <TimePicker x:Name="horaColeta"/>
 
-                <!-- TELEFONE -->
-                <Label Text="Telefone"/>
-                <Entry x:Name="txtTelefone" Keyboard="Telephone"/>
+                    <!-- TELEFONE -->
+                    <Label Text="Telefone"/>
+                    <Entry x:Name="txtTelefone" Keyboard="Telephone"/>
 
-                <!-- OBSERVAÇÕES -->
-                <Label Text="Observações"/>
-                <Editor x:Name="txtObs" HeightRequest="80"/>
+                    <!-- OBSERVAÇÕES -->
+                    <Label Text="Observações"/>
+                    <Editor x:Name="txtObs" HeightRequest="80"/>
 
-                <!-- BOTÕES -->
-                <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10" Margin="0,20,0,0">
+                    <!-- BOTÕES -->
+                    <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10" Margin="0,20,0,0">
 
-                    <Button Text="Agendar"
-                            BackgroundColor="#2E7D32" 
-                            TextColor="White"
-                            CornerRadius="10"
-                            HeightRequest="45"
-                            Grid.Column="0"
-                            Clicked="OnAgendarClicked"/>
+                        <Button Text="Agendar"
+							BackgroundColor="#2E7D32" 
+							TextColor="White"
+							CornerRadius="10"
+							HeightRequest="45"
+							Grid.Column="0"
+							Clicked="OnAgendarClicked"/>
 
-                    <Button Text="Editar"
-                            BackgroundColor="#FFC107"
-                            TextColor="Black"
-                            CornerRadius="10"
-                            HeightRequest="45"
-                            Grid.Column="1"
-                            Clicked="OnEditarClicked"/>
+                        <Button Text="Editar"
+							BackgroundColor="#FFC107"
+							TextColor="Black"
+							CornerRadius="10"
+							HeightRequest="45"
+							Grid.Column="1"
+							Clicked="OnEditarClicked"/>
 
-                    <Button Text="Novo"
-                            BackgroundColor="#2196F3"
-                            TextColor="White"
-                            CornerRadius="10"
-                            HeightRequest="45"
-                            Grid.Column="2"
-                            Clicked="OnNovoClicked"/>
+                        <Button Text="Novo"
+							BackgroundColor="#2196F3"
+							TextColor="White"
+							CornerRadius="10"
+							HeightRequest="45"
+							Grid.Column="2"
+							Clicked="OnNovoClicked"/>
 
-                </Grid>
+                    </Grid>
 
-            </VerticalStackLayout>
-        </ScrollView>
+                </VerticalStackLayout>
+            </ScrollView>
 
-        <!-- MENSAGEM DE SUCESSO (CORRIGIDO) -->
-        <Label x:Name="lblSucesso"
-               Text="Agendamento salvo com sucesso! ✅"
-               BackgroundColor="#2E7D32"
-               TextColor="White"
-               HorizontalOptions="Fill"
-               VerticalOptions="End"
-               Grid.RowSpan="3"
-               Padding="10"
-               IsVisible="False"
-               Opacity="0"/>
+            <!-- MENSAGEM DE SUCESSO (CORRIGIDO) -->
+            <Label x:Name="lblSucesso"
+			   Text="Agendamento salvo com sucesso! ✅"
+			   BackgroundColor="#2E7D32"
+			   TextColor="White"
+			   HorizontalOptions="Fill"
+			   VerticalOptions="End"
+			   Grid.RowSpan="3"
+			   Padding="10"
+			   IsVisible="False"
+			   Opacity="0"/>
 
 
 
-      
-       
-       
-        <!-- MENU INFERIOR -->
-        <Grid Grid.Row="2" BackgroundColor="#f8f8f4" Padding="5">
 
-           
 
-            <VerticalStackLayout HorizontalOptions="Start"
-                                 Margin="10,2,0,0">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+            <!-- MENU INFERIOR -->
+            <Grid Grid.Row="2" BackgroundColor="#f8f8f4" Padding="5">
 
-                <Label Text="🏠"
-                       FontSize="25"
-                       HorizontalOptions="Center"/>
 
-               
 
-            </VerticalStackLayout>
+                <VerticalStackLayout HorizontalOptions="Start"
+								 Margin="10,2,0,0">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="🏠"
+					   FontSize="25"
+					   HorizontalOptions="Center"/>
+
+
+
+                </VerticalStackLayout>
+
+            </Grid>
 
         </Grid>
-
-       </Grid>
 
     </Grid>
 

@@ -8,7 +8,7 @@
     
     <Grid>
         <!-- FUNDO -->
-        <Image Source="folhaspadrao2.jpeg"
+        <Image Source="folhaspadrao.jpeg"
                Aspect="AspectFill"
                Opacity="0.80"/>
 

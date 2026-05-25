@@ -1,145 +1,248 @@
 <ContentPage 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.Pages.Educacao.Nivel4Page"
-    NavigationPage.HasNavigationBar="False"
-    BackgroundColor="#F5F5F5">
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="AppReciclique.Pages.Educacao.Nivel4Page"
+	NavigationPage.HasNavigationBar="False"
+	BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhabonus.jpeg"
+		   Aspect="AspectFill"
+		   Opacity="1"/>
 
-        <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout 
-BackgroundColor="Transparent" 
-   Spacing="5"
-Padding="20,20,20,0"
-Grid.Row="0">
+        <Grid RowDefinitions="Auto,*,Auto">
 
-            <Label Text=  "NIVEL 4 - ENTULHOS E DESCARTES"
-                  TextColor="#1B365D"
-           FontSize="13"
-           FontAttributes="Bold"/>
+            <!-- TOPO (ROW 0) -->
+            <VerticalStackLayout 
+				BackgroundColor="Transparent" 
+				Spacing="5"
+				Padding="0,35,0,0"
+				Grid.Row="0">
 
-        </VerticalStackLayout>
+                <Label Text="♻️ NÍVEL 4"
+				   TextColor="#1B365D"
+				   FontSize="23"
+				   HorizontalOptions="Center"
+				   FontFamily="MontserratExtraBold"
+				   FontAttributes="Bold"/>
 
+                <Label Text="ENTULHOS E DESCARTES"
+				   TextColor="#1B364A"
+				   FontSize="15"
+				   HorizontalOptions="Center"
+				   FontFamily="MontserratExtraBold"
+				   FontAttributes="Bold"/>
 
-
-        <!-- CONTEÚDO (ROW 1) -->
-
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="18">
-
-                <!-- BOTÃO 1 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/30387768/pexels-photo-30387768.jpeg?_gl=1*1gt1gip*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAxNTckajUxJGwwJGgw"
-                        Aspect="AspectFill"
-                        Opacity="0.45"/>
-
-                        <Button Text="1- Como são Gerados?"
-                         BackgroundColor="Transparent"
-                         TextColor="#1B5E20"
-                         FontAttributes="Bold"
-                         FontSize="20"
-                         Clicked="OnComoClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 2 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/15822215/pexels-photo-15822215.jpeg?_gl=1*1v376bo*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAxOTgkajEwJGwwJGgw"
-                        Aspect="AspectFill"
-                        Opacity="0.45"/>
-                        <Button Text="2- Entulhos: Descarte nas Obras"
-                         BackgroundColor="Transparent"
-                         TextColor="#1B5E20"
-                         FontAttributes="Bold"
-                         FontSize="20"
-                         Clicked="OnAspiradorClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 3 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/26098429/pexels-photo-26098429.jpeg?_gl=1*1g5knmh*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAyNDAkajU3JGwwJGgw"
-                        Aspect="AspectFill"
-                        Opacity="0.45"/>
-                        <Button Text="3- Para onde vão os Entulhos?"
-                         BackgroundColor="Transparent"
-                         TextColor="#1B5E20"
-                         FontAttributes="Bold"
-                         FontSize="20"
-                         Clicked="OnOndeClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 4 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/28041688/pexels-photo-28041688.jpeg?_gl=1*1fmlgbv*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAyNzIkajI1JGwwJGgw"
-                        Aspect="AspectFill"
-                        Opacity="0.45"/>
-                        <Button Text="4- EcoPontos"
-                         BackgroundColor="Transparent"
-                         TextColor="#1B5E20"
-                         FontAttributes="Bold"
-                         FontSize="20"
-                         Clicked="OnEcoClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 5 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/30387772/pexels-photo-30387772.jpeg?_gl=1*p4ai2p*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzA0MTkkajM2JGwwJGgw"
-                        Aspect="AspectFill"
-                        Opacity="0.45"/>
-                        <Button Text="5- Projeto: Recicla Entulho"
-                         BackgroundColor="Transparent"
-                         TextColor="#1B5E20"
-                         FontAttributes="Bold"
-                         FontSize="20"
-                         Clicked="OnProjetoClicked"/>
-                    </Grid>
-                </Frame>
-
-                <!-- BOTÃO 6 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.pexels.com/photos/28041688/pexels-photo-28041688.jpeg?_gl=1*1fmlgbv*_ga*NDc3MzY4NDYzLjE3NzY4MTQxNDQ.*_ga_8JE65Q40S6*czE3Nzc2NzAxNDgkbzQkZzEkdDE3Nzc2NzAyNzIkajI1JGwwJGgw"
-                        Aspect="AspectFill"
-                        Opacity="0.45"/>
-                        <Button Text="6- Trata Entulho"
-                         BackgroundColor="Transparent"
-                         TextColor="#1B5E20"
-                         FontAttributes="Bold"
-                         FontSize="20"
-                         Clicked="OnTrataClicked"/>
-                    </Grid>
-                </Frame>
+                <BoxView HeightRequest="3"
+					 WidthRequest="300"
+					 Color="#7FA87C"
+					 CornerRadius="4"
+					 HorizontalOptions="Center"/>
 
             </VerticalStackLayout>
 
-        </ScrollView>
 
-        <!-- MENU HOME (ROW 2) -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
+            <!-- CONTEÚDO (ROW 1) -->
+            <ScrollView Grid.Row="1">
 
-            <!-- BOTÃO HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
-              Margin="10,0,0,0">
+                <VerticalStackLayout Padding="20" Spacing="18">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+                    <!-- CARD 1 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">	
 
-                <Label Text="🏠"
-    FontSize="24"
-    HorizontalOptions="Center"/>
+                        <VerticalStackLayout>
 
-            </VerticalStackLayout>
+                            <Label Text="1️⃣ - Como são Gerados?"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="entulhos1.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnComoClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 2 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="2️⃣ - Descarte nas Obras"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="entulhos2.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAspiradorClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 3 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">	
+
+                        <VerticalStackLayout>
+
+                            <Label Text="3️⃣ - Destino dos Entulhos"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="entulhos3.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnOndeClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 4 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="4️⃣ - EcoPontos"
+					   FontFamily="MontserratExtraBold"
+					   FontAttributes="Bold"
+					   FontSize="18"
+					   TextColor="#1B5E20"/>
+
+                            <Image Source="entulhos4.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnEcoClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 5 -->
+                    <Frame CornerRadius="18"
+						   BackgroundColor="#EEF5EA"
+						   BorderColor="#BFCDB8"
+						   Padding="15"
+						   Margin="0"
+						   HasShadow="True">		
+
+                        <VerticalStackLayout>
+
+                            <Label Text="5️⃣ - Recicla Entulho"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="entulhos5.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProjetoClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                    <!-- CARD 6 -->
+                    <Frame CornerRadius="18"
+					   BackgroundColor="#EEF5EA"
+					   BorderColor="#BFCDB8"
+					   Padding="15"
+					   Margin="0"
+					   HasShadow="True">
+
+                        <VerticalStackLayout>
+
+                            <Label Text="6️⃣ - Trata Entulho"
+							   FontFamily="MontserratExtraBold"
+							   FontAttributes="Bold"
+							   FontSize="18"
+							   TextColor="#1B5E20"/>
+
+                            <Image Source="entulhos6.jpg"
+							   HeightRequest="110"
+							   Aspect="AspectFill"
+							   Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTrataClicked"/>
+                        </Frame.GestureRecognizers>
+
+                    </Frame>
+
+                </VerticalStackLayout>
+
+            </ScrollView>
+
+            <!-- MENU HOME (ROW 2) -->
+            <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
+
+                <!-- BOTÃO HOME -->
+                <VerticalStackLayout HorizontalOptions="Start"
+						Margin="10,0,0,0">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="🏠"
+						FontSize="24"
+						HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+            </Grid>
         </Grid>
-
     </Grid>
 </ContentPage>

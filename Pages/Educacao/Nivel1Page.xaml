@@ -1,120 +1,214 @@
 <ContentPage 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.Pages.Educacao.Nivel1Page"
-    NavigationPage.HasNavigationBar="False"
-    BackgroundColor="#F5F5F5">
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="AppReciclique.Pages.Educacao.Nivel1Page"
+	NavigationPage.HasNavigationBar="False"
+	BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
-
-        <!-- TOPO (ROW 0) -->
-        <VerticalStackLayout 
- BackgroundColor="Transparent" 
-Spacing="5"
- Padding="20,20,20,0"
- Grid.Row="0">
-
-            <Label Text=  " NÍVEL 1 — O BÁSICO DA RECICLAGEM"
-    TextColor="#1B365D"
-    FontSize="13"
-    FontAttributes="Bold"/>
-
-        </VerticalStackLayout>
+    <Grid>
+        <!-- FUNDO -->
+        <Image Source="folhabonus.jpeg"
+	            Aspect="AspectFill"
+	            Opacity="0.98"/>
 
 
-        <!-- CONTEÚDO (ROW 1) -->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="18">
 
-                <!-- BOTÃO 1 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b"
-                               Aspect="AspectFill"
-                               Opacity="0.45"/>
+        <Grid RowDefinitions="Auto,*,Auto">
 
-                        <Button Text="1- Reciclagem de Vidro"
-                                BackgroundColor="Transparent"
-                                TextColor="#1B5E20"
-                                FontAttributes="Bold"
-                                FontSize="20"
-                                Clicked="OnVidroClicked"/>
-                    </Grid>
-                </Frame>
+            <!-- TOPO (ROW 0) -->
+            <VerticalStackLayout 
+                BackgroundColor="Transparent" 
+                Spacing="5"
+                Padding="0,35,0,0"
+                Grid.Row="0">
 
-                <!-- BOTÃO 2 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ZBqR-oGxH3gv7l9akL0rEUMS-Cj1JGWNgw"
-                               Aspect="AspectFill"
-                               Opacity="0.45"/>
-                        <Button Text="2- Reciclagem de Plástico"
-                                BackgroundColor="Transparent"
-                                TextColor="#1B5E20"
-                                FontAttributes="Bold"
-                                FontSize="20"
-                                Clicked="OnPlasticoClicked"/>
-                    </Grid>
-                </Frame>
+                <Label Text=  " ♻️ NÍVEL 1"
+					TextColor="#1B365D"
+					FontSize="23"
+				   HorizontalOptions="Center" 
+					   FontFamily="MontserratExtraBold"
+					FontAttributes="Bold"/>
 
-                <!-- BOTÃO 3 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrkimgrelW5JqZIS3zFznhtGQ08Y2NUllNaA"
-                               Aspect="AspectFill"
-                               Opacity="0.45"/>
-                        <Button Text="3- Reciclagem de Papel"
-                                BackgroundColor="Transparent"
-                                TextColor="#1B5E20"
-                                FontAttributes="Bold"
-                                FontSize="20"
-                                Clicked="OnPapelClicked"/>
-                    </Grid>
-                </Frame>
+                <Label Text=  "O BÁSICO DA RECICLAGEM"
+	                TextColor="#1B364a"
+	                FontSize="15"
+                    HorizontalOptions="Center" 
+	                FontFamily="MontserratExtraBold"
+	                FontAttributes="Bold"/>
 
-                <!-- BOTÃO 4 -->
-                <Frame CornerRadius="18" HeightRequest="140">
-                    <Grid>
-                        <Image Source="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6"
-                               Aspect="AspectFill"
-                               Opacity="0.45"/>
-                        <Button Text="4- Reciclagem Metal"
-                                BackgroundColor="Transparent"
-                                TextColor="#1B5E20"
-                                FontAttributes="Bold"
-                                FontSize="20"
-                                Clicked="OnMetalClicked"/>
-                    </Grid>
-                </Frame>
-
-            </VerticalStackLayout>
-            
-            
-           
-        </ScrollView>
-        <!-- MENU HOME (ROW 2) -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
-
-         
-
-            <!-- BOTÃO HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
-                         Margin="10,0,0,0">
-
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
-
-                <Label Text="🏠"
-               FontSize="24"
-               HorizontalOptions="Center"/>
+                <BoxView HeightRequest="3"
+			        WidthRequest="300"
+			        Color="#7FA87C"
+			        CornerRadius="4"
+			        HorizontalOptions="Center"/>
 
 
             </VerticalStackLayout>
+
+
+            <!-- CONTEÚDO (ROW 1) -->
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Padding="20" Spacing="18">
+
+                    <!-- BOTÃO 1 -->
+                    <Frame CornerRadius="18"
+							   BackgroundColor="#EEF5EA"
+							   BorderColor="#BFCDB8"
+							   Padding="15"
+								 Margin="0"
+							   HasShadow="True">
+
+
+                        <VerticalStackLayout>
+
+                            <Label Text="1️⃣ - Vidro" FontAttributes="Bold" 
+								FontFamily="MontserratExtraBold"
+									 FontSize="18"
+								TextColor="#1B5E20"/>
+
+
+                            <Image Source= "vidro2.jpg"
+								HeightRequest="110"
+								Aspect="AspectFill"
+								Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <!-- clique -->
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnVidroClicked"/>
+                        </Frame.GestureRecognizers>
+
+
+                    </Frame>
+
+                    <!-- BOTÃO 2 -->
+                    <Frame CornerRadius="18"
+						   BackgroundColor="#EEF5EA"
+						    BorderColor="#BFCDB8"
+							Padding="15"
+												Margin="0"
+							   HasShadow="True">
+
+
+                        <VerticalStackLayout>
+
+                            <Label Text="2️⃣ - Plástico" FontAttributes="Bold"
+							 FontFamily="MontserratExtraBold"
+								FontSize="18"
+							    TextColor="#1B5E20"/>
+
+
+                            <Image Source="plastico.jpg"
+								HeightRequest="110"
+								Aspect="AspectFill"
+								Margin="0,10,0,0"/>
+                        </VerticalStackLayout>
+
+
+                        <!-- clique -->
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPlasticoClicked"/>
+                        </Frame.GestureRecognizers>
+
+
+                    </Frame>
+
+
+
+                    <!-- BOTÃO 3 -->
+
+                    <Frame CornerRadius="18"
+							   BackgroundColor="#EEF5EA"
+							   BorderColor="#BFCDB8"
+							   Padding="15"
+												Margin="0"
+							   HasShadow="True">
+
+
+                        <VerticalStackLayout>
+
+                            <Label Text="3️⃣ - Papel" FontAttributes="Bold"
+			                  FontFamily="MontserratExtraBold"     
+								   FontSize="18"
+			                       TextColor="#1B5E20"/>
+
+
+                            <Image Source= "papel2.jpg"
+							HeightRequest="110"
+							Aspect="AspectFill"
+							Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <!-- clique -->
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPapelClicked"/>
+                        </Frame.GestureRecognizers>
+
+
+                    </Frame>
+
+                    <!-- BOTÃO 4 -->
+                    <Frame CornerRadius="18"
+							   BackgroundColor="#EEF5EA"
+							   BorderColor="#BFCDB8"
+							   Padding="15"
+												Margin="0"
+							   HasShadow="True">
+
+
+                        <VerticalStackLayout>
+
+                            <Label Text="4️⃣ - Metal" FontAttributes="Bold"
+								FontFamily="MontserratExtraBold"
+								   FontSize="18"
+								TextColor="#1B5E20"/>
+
+
+                            <Image Source= "metal.jpg"
+								HeightRequest="110"
+								Aspect="AspectFill"
+								Margin="0,10,0,0"/>
+
+                        </VerticalStackLayout>
+
+                        <!-- clique -->
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnMetalClicked"/>
+                        </Frame.GestureRecognizers>
+
+
+                    </Frame>
+                </VerticalStackLayout>
+
+
+
+            </ScrollView>
+            <!-- MENU HOME (ROW 2) -->
+            <Grid Grid.Row="2" BackgroundColor="White" Padding="5">
+
+
+
+                <!-- BOTÃO HOME -->
+                <VerticalStackLayout HorizontalOptions="Start"
+						 Margin="10,0,0,0">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="🏠"
+			            FontSize="24"
+			            HorizontalOptions="Center"/>
+
+
+                </VerticalStackLayout>
+
+            </Grid>
 
         </Grid>
-
     </Grid>
-    
-       
+
+
 </ContentPage>

@@ -3,7 +3,7 @@ using Android.Runtime;
 
 namespace AppReciclique
 {
-    [Application]
+    [global::Android.App.Application]
     public class MainApplication : MauiApplication
     {
         public MainApplication(IntPtr handle, JniHandleOwnership ownership)
